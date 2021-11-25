@@ -1,2 +1,46 @@
-/*<html>
-<html>*/
+@font-face {
+    font-family: 'Thabit';
+    src: url('thabit1-webfont.woff2') format('woff2'),
+         url('thabit1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.titulos1 {
+    color : black;
+    text-align: center;
+    font-family: Thabit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+}
+
+#instagram {
+    position: absolute;
+left: 12.98%;
+right: 84.99%;
+top: 38.26%;
+bottom: 51.62%;
+}
+
+#twitter{
+
+    position: absolute;
+left: 22.66%;
+right: 75.31%;
+top: 38.26%;
+bottom: 51.62%;
+
+}
+
+#youtube {
+position: absolute;
+left: 17.82%;
+right: 80.15%;
+top: 38.26%;
+bottom: 51.62%;
+
+}
