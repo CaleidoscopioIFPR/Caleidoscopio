@@ -1,2 +1,9 @@
-/*<html>
-<html>*/
+.titulos1 {
+    color : black;
+    text-align:left;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+}
