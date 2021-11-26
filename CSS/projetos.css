@@ -10,6 +10,18 @@
     line-height: 130px;
 }
 
+.legenda {
+    
+font-family: 'thabitregular';
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 32px;
+
+align-items: center;
+text-align: center;
+}
+
 #instagram {
     position: absolute;
 left: 12.98%;
