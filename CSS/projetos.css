@@ -1,6 +1,14 @@
+.blocos {
+    background-color: #CE7D7D;
+    opacity: 1;
+    padding-top: 5%;
+    height: 500px;
+   
+    
 
+}
 
-.titulos1 {
+.titulos {
     color : black;
     text-align: center;
     font-family: 'thabitregular';
@@ -9,6 +17,17 @@
     font-size: 100px;
     line-height: 130px;
 }
+.titulos1 {
+    color : black;
+    position: relative;
+    text-align:left;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+}
+
 
 .legenda {
     
@@ -17,7 +36,6 @@ font-style: normal;
 font-weight: bold;
 font-size: 24px;
 line-height: 32px;
-
 align-items: center;
 text-align: center;
 }
@@ -46,5 +64,12 @@ left: 17.82%;
 right: 80.15%;
 top: 38.26%;
 bottom: 51.62%;
+
+}
+
+#dancart{
+position: absolute;
+left: 1%;
+right:80%;
 
 }
