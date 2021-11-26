@@ -1,17 +1,9 @@
-@font-face {
-    font-family: 'Thabit';
-    src: url('thabit1-webfont.woff2') format('woff2'),
-         url('thabit1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
 .titulos1 {
     color : black;
     text-align: center;
-    font-family: Thabit;
+    font-family: 'thabitregular';
     font-style: normal;
     font-weight: 500;
     font-size: 100px;
