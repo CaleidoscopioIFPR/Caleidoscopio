@@ -2,8 +2,9 @@
     color : black;
     text-align:left;
     font-family: 'thabitregular';
-    font-style: normal;
+    font-style: none;
     font-weight: 500;
     font-size: 100px;
     line-height: 130px;
+    text-transform: uppercase;
 }
