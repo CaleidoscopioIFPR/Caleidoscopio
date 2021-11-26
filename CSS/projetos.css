@@ -1,3 +1,9 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    }
+
 .blocos {
     background-color: #CE7D7D;
     opacity: 1;
@@ -44,35 +50,10 @@
     font-weight: normal;
     font-size: 48px;
     line-height: 55px;
-}
-
-
-#instagram {
     position: absolute;
-left: 12.98%;
-right: 84.99%;
-top: 38.26%;
-bottom: 51.62%;
+    margin-left: 50%;
 }
 
-#twitter{
-
-    position: absolute;
-left: 22.66%;
-right: 75.31%;
-top: 38.26%;
-bottom: 51.62%;
-
-}
-
-#youtube {
-position: absolute;
-left: 17.82%;
-right: 80.15%;
-top: 38.26%;
-bottom: 51.62%;
-
-}
 
 #dancart{
 position: absolute;
@@ -85,4 +66,10 @@ footer{
     width: 100%;
     height: 300px;
     bottom: 0px;
+}
+
+.redes-sociais ul li{
+    display: inline-block;
+    float:left;
+
 }
