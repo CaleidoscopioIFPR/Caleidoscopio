@@ -5,7 +5,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 100px;
-    line-height: 130px;
+    line-height: 80px;
 }
 .legenda {
     
@@ -16,4 +16,143 @@
     line-height: 32px;
     align-items: center;
     text-align: center;
-    }
+}
+
+.logoCaleidoscopio {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 48px;
+    top: 36px;
+}
+
+.textoBotao {
+    font-family: Thabit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.botao {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.botaoFiltrar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(73, 73, 73);
+    position: absolute;
+    width: 145px;
+    height: 63px;
+    left: 735px;
+    top: 517px;
+}
+      
+.botaoFiltrar:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+ }
+
+
+.botaoAdicionar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(73, 73, 73);
+    position: absolute;
+    width: 208px;
+    height: 63px;
+    left: 985px;
+    top: 517px;
+} 
+
+.botaoAdicionar:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+
+.figuraIlustrativaN1 {
+    position: absolute;
+    width: 474px;
+    height: 700px;
+    left: 119px;
+    top: 811px;
+    object-fit: cover;
+    background: #E2E1E1;
+}
+/**.FundofiguraIlustrativaN1 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 26.29%;
+
+background: #E2E1E1;
+}**/
+
+.figuraIlustrativaN2 {
+    
+    position: absolute;
+    width: 474px;
+    height: 700px;
+    left: 735px;
+    top: 811px;
+    background: #E2E1E1;
+}
+
+.figuraIlustrativaN3 {
+    position: absolute;
+    width: 514px;
+    height: 700px;
+    left: 1310px;
+    top: 811px;
+    background: #E2E1E1;
+}
+
+.figuraIlustrativaN4 {
+    position: absolute;
+    width: 474px;
+    height: 700px;
+    left: 119px;
+    top: 1787px;
+    background: #E2E1E1;
+}
+
+.figuraIlustrativaN5 {
+    position: absolute;
+    width: 474px;
+    height: 700px;
+    left: 723px;
+    top: 1776px;
+    background: #E2E1E1;
+}
+
+.figuraIlustrativaN6 {
+    position: absolute;
+    width: 474px;
+    height: 700px;
+    left: 1310px;
+    top: 1776px;
+    background: #E2E1E1;
+}
+
+.rodape {
+    position: absolute;
+    width: 2458px;
+    height: 173px;
+    left: -269px;
+    top: 3156px;
+    background-color: white;
+}
