@@ -20,4 +20,14 @@
     text-align:left;
     font-family: 'thabitregular';
     font-style: none;
+    font-size: 70px;
+}
+.body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto!important;
+    padding: 50px!important ;
+}
+.conteudo {
+    
 }
