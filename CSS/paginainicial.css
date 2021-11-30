@@ -1,3 +1,7 @@
+body {
+    background-color: #ffffff;
+}
+
 .titulos {
    color : black;
    text-align: center;
@@ -8,7 +12,6 @@
    line-height: 149px;
    color: black;
  }
-
 
  .todasImagens{
     width: 100%;
@@ -85,6 +88,7 @@ a:active {
 	}
 
 
+
 .Acervo {
     position: absolute;
     width: 100px;
@@ -94,6 +98,10 @@ a:active {
     margin-left:50px;
 }
 
+.Acervo:hover {
+    text-decoration: underline;
+}
+
 .ArteEManifestacoes {
     position: absolute;
     width: 2000px;
@@ -101,6 +109,10 @@ a:active {
     left: 30px;
     top: 1600px;
     margin-left:50px;
+}
+
+.ArteEManifestacoes:hover {
+    text-decoration: underline;
 }
 
 .textoIlustrativo {
@@ -125,7 +137,7 @@ a:active {
     left: 10px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -143,7 +155,7 @@ a:active {
     left: 420px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -161,7 +173,7 @@ a:active {
     left: 830px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -179,7 +191,7 @@ a:active {
     left: 1240px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -197,7 +209,7 @@ a:active {
     left: 1650px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -215,7 +227,7 @@ a:active {
     left: 1650px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -233,7 +245,7 @@ a:active {
     left: 1650px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -251,7 +263,7 @@ a:active {
     left: 1650px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
@@ -269,7 +281,7 @@ a:active {
     left: 1650px;
     top: 1010px;
     margin-left:50px;
-    background: #E2E1E1;
+    background: #d7e5f0;
     cursor: pointer;
 }
 
