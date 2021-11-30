@@ -1,3 +1,7 @@
+.body {
+    width: 100%;
+    height: 100%;
+}
 .titulos1 {
     color : black;
     text-align:left;
@@ -7,6 +11,11 @@
     font-size: 100px;
     line-height: 130px;
     text-transform: uppercase;
+    position: absolute;
+    width: 834px;
+    height: 425px;
+    left: 145px;
+    top: 5px;
 }
 .legenda {
     font-family: 'thabitregular';
@@ -14,26 +23,93 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
+    position: absolute;
+    width: 813px;
+    height: 85px;
+    left: 145px;
+    top: 465px;
 }
-.subtitulo {
+.subtitulo1 {
     color : black;
     text-align:left;
     font-family: 'thabitregular';
     font-style: none;
     font-size: 70px;
-}
-.body {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto!important;
-    padding: 50px!important ;
-}
-.conteudo {
-    position: absolute;
-    width: 514px;
-    height: 700px;
-    left: 1310px;
-    top: 811px;
-    background: #E2E1E1;
-}
 
+    position: absolute;
+    width: 1037px;
+    height: 171px;
+    left: 145px;
+    top: 580px;
+}
+.subtitulo2 {
+    color : black;
+    text-align:left;
+    font-family: 'thabitregular';
+    font-style: none;
+    font-size: 70px;
+
+    position: absolute;
+    width: 1216px;
+    height: 186px;
+    left: 145px;
+    top: 1415px;
+}
+.imagem1 {
+    position: absolute;
+    width: 480px;
+    height: 632px;
+    left: 686px;
+    top: 935px;
+}
+.imagem2 {
+    position: absolute;
+    width: 480px;
+    height: 632px;
+    left: 1182px;
+    top: 935px;
+}
+.imagem3 {
+    position: absolute;
+    width: 480px;
+    height: 632px;
+    left: 684px;
+    top: 1780px;
+}
+.imagem4 {
+    position: absolute;
+    width: 480px;
+    height: 632px;
+    left: 1180px;
+    top: 1780px;
+}
+.textoDescriçao1 {
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-right: 100px;
+
+    position: absolute;
+    width: 1037px;
+    height: 171px;
+    left: 685px;
+    top: 735px;
+}
+.textoDescriçao2 {
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-right: 100px;
+
+    position: absolute;
+    width: 1037px;
+    height: 171px;
+    left: 685px;
+    top: 1585px;
+}
