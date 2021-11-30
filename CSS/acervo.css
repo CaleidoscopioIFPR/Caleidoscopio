@@ -1,8 +1,7 @@
 .body {
      width: 100%;
      height: 100%;
-     margin: 0 auto ;
-
+     margin: 0 auto;
 }
 
 
@@ -21,6 +20,12 @@
     -o-animation: fadeIn linear 3s;
     -ms-animation: fadeIn linear 3s;
   }
+
+  .titulosShadow {
+    background-color: #cccccc;
+    color: #000000;
+    text-shadow: 2px 2px 7px #ffffff;
+}
   
   
 
@@ -54,12 +59,9 @@ body::-webkit-scrollbar {
 
 .logoCaleidoscopio {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background: url("../Acervo/Imagens/.logoCaleidoscopio.png") no-repeat 0 0;
-    display: block;
-    left: 48px;
-    top: 36px;
+    
+    left: 73px;
+    top: 56px;
 }
 
 .textoBotao {
@@ -120,23 +122,6 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-.botaoVerMais {
-    background-color: white; 
-    color: black; 
-    position: absolute;
-    border: 2px solid rgb(73, 73, 73);
-    position: absolute;
-    width: 223px;
-    height: 70px;
-    left: 848px;
-    top: 2989px;
-}
-
-.botaoVerMais:hover {
-    background-color:rgb(0, 0, 0);
-    color: white;
-}
-
 
 
 .textoIlustrativo {
@@ -144,12 +129,12 @@ body::-webkit-scrollbar {
     position: absolute;
     left: 5%;
     right: 5%;
-    top: 80.48%;
+    top: 82.48%;
     bottom: 6.37%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 33px;
 }
 .figuraIlustrativaN1 {
@@ -160,7 +145,15 @@ body::-webkit-scrollbar {
     top: 811px;
     object-fit: cover;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN1 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN1:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN2 {
     position: absolute;
@@ -168,9 +161,17 @@ body::-webkit-scrollbar {
     height: 550px;
     left: 561px;
     top: 811px;
-    background: #E2E1E1;
-    
+    background: #E2E1E1;   
+    cursor: pointer;
 }
+
+.figuraIlustrativaN2 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN2:hover img {
+    transform: scale(1.1);
+  }
+
 
 .figuraIlustrativaN3 {
     position: absolute;
@@ -179,7 +180,15 @@ body::-webkit-scrollbar {
     left: 1035px;
     top: 811px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN3 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN3:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN4 {
     position: absolute;
@@ -188,7 +197,15 @@ body::-webkit-scrollbar {
     left: 1508px;
     top: 811px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN4 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN4:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN5 {
     position: absolute;
@@ -198,7 +215,15 @@ body::-webkit-scrollbar {
     top: 1550px;
     object-fit: cover;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN5 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN5:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN6 {
     position: absolute;
@@ -207,7 +232,15 @@ body::-webkit-scrollbar {
     left: 561px;
     top: 1550px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN6 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN6:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN7 {
     position: absolute;
@@ -216,7 +249,15 @@ body::-webkit-scrollbar {
     left: 1035px;
     top: 1550px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN7 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN7:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN8 {
     position: absolute;
@@ -225,7 +266,15 @@ body::-webkit-scrollbar {
     left: 1508px;
     top: 1550px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN8 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN8:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN9 {
     position: absolute;
@@ -234,7 +283,15 @@ body::-webkit-scrollbar {
     left: 88px;
     top: 2289px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN9 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN9:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN10 {
     position: absolute;
@@ -243,7 +300,15 @@ body::-webkit-scrollbar {
     left: 1508px;
     top: 2289px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN10 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN10:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN11 {
     position: absolute;
@@ -252,7 +317,15 @@ body::-webkit-scrollbar {
     left: 1035px;
     top: 2289px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN11 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN11:hover img {
+    transform: scale(1.1);
+  }
 
 .figuraIlustrativaN12 {
     position: absolute;
@@ -261,7 +334,15 @@ body::-webkit-scrollbar {
     left: 561px;
     top: 2289px;
     background: #E2E1E1;
+    cursor: pointer;
 }
+
+.figuraIlustrativaN12 img { 
+    transition: all 0.5s;
+  }
+  .figuraIlustrativaN12:hover img {
+    transform: scale(1.1);
+  }
 
 
 .rodape {
