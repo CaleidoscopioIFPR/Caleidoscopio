@@ -1,10 +1,13 @@
-.blocos {
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.bloco1 {
     background-color: #CE7D7D;
     opacity: 1;
-    padding-top: 5%;
-    height: 500px;
+    height: 580px;
 }
-
 .titulos {
     color : black;
     text-align: center;
@@ -13,8 +16,9 @@
     font-weight: 500;
     font-size: 100px;
     line-height: 130px;
+    margin-bottom: 5px;
 }
-.titulos1 {
+.subtitulo1 {
     color : black;
     position: relative;
     text-align:left;
@@ -23,11 +27,10 @@
     font-weight: 500;
     font-size: 100px;
     line-height: 130px;
+    text-transform: uppercase;
+    margin-left: 150px;
 }
-
-
 .legenda {
-    
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: bold;
@@ -36,19 +39,39 @@
     align-items: center;
     text-align: center;
 }
-
-.conteudo {
-
+.texto1{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 24px;
+    position: absolute;
+    height: 275px;
+    left: 1053px;
+    right: 150px;
+    top: 655px;
+}
+.conteudo{
     font-family: 'unnaregular';
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
     line-height: 55px;
 }
-
-
-#instagram {
+.imagem1 {
     position: absolute;
+    height: 474px;
+    left: 100px;
+    right: 1110px;
+    top: 655px;
+}
+footer{
+width: 100%;
+height: 300px;
+bottom: 0px;
+}
+#instagram {
+position: absolute;
 left: 12.98%;
 right: 84.99%;
 top: 38.26%;
@@ -56,33 +79,16 @@ bottom: 51.62%;
 }
 
 #twitter{
-
-    position: absolute;
+position: absolute;
 left: 22.66%;
 right: 75.31%;
 top: 38.26%;
 bottom: 51.62%;
-
 }
-
 #youtube {
 position: absolute;
 left: 17.82%;
 right: 80.15%;
 top: 38.26%;
 bottom: 51.62%;
-
-}
-
-#dancart{
-position: absolute;
-left: 5%;
-right:80%;
-
-}
-
-footer{
-    width: 100%;
-    height: 300px;
-    bottom: 0px;
 }
