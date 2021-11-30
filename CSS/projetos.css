@@ -6,7 +6,33 @@ body {
 .bloco1 {
     background-color: #CE7D7D;
     opacity: 1;
-    height: 580px;
+    height: 450px;
+}
+.bloco2 {
+    background-color:#F8EB7E ;
+    opacity: 1;
+    height: 450px;
+}
+.bloco3{
+    background-color: #97D382;
+    opacity: 1;
+    height: 450px
+}
+.orientaçaoCont{ 
+    align-content: center;
+}
+.gifFofo{
+    position:absolute;
+    top: 5px;
+    left: 155px;
+}
+.gifFofo2{
+    position:absolute;
+    top: 5px;
+    right: 155px;
+}
+.cabeçalho{ 
+    margin-bottom: 350px;
 }
 .titulos {
     color : black;
@@ -19,6 +45,30 @@ body {
     margin-bottom: 5px;
 }
 .subtitulo1 {
+    color : black;
+    position: relative;
+    text-align:left;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+    text-transform: uppercase;
+    margin-left: 150px;
+}
+.subtitulo2 {
+    color : black;
+    position: relative;
+    text-align:right;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+    text-transform: uppercase;
+    margin-right: 200px;
+}
+.subtitulo3 {
     color : black;
     position: relative;
     text-align:left;
@@ -44,12 +94,36 @@ body {
     font-family:'Unna';
     font-style:normal;
     font-weight:normal;
-    font-size: 24px;
+    font-size: 20px;
     position: absolute;
     height: 275px;
     left: 1053px;
     right: 150px;
-    top: 655px;
+    top: 880px;
+}
+.texto2{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 20px;
+    position: absolute;
+    height: 275px;
+    left: 100px;
+    right: 1100px;
+    top: 1595px;
+}
+.texto3{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 20px;
+    position: absolute;
+    height: 275px;
+    left: 1053px;
+    right: 150px;
+    top: 2300px;
 }
 .conteudo{
     font-family: 'unnaregular';
@@ -61,9 +135,24 @@ body {
 .imagem1 {
     position: absolute;
     height: 474px;
-    left: 100px;
+    left: 150px;
     right: 1110px;
-    top: 655px;
+    top: 880px;
+}
+.imagem2 {
+    position: absolute;
+    height: 474px;
+    left: 1055px;
+    right: 1110px;
+    top: 1595px;
+
+}
+.imagem3 {
+    position: absolute;
+    height: 474px;
+    left: 150px;
+    right: 1110px;
+    top: 2300px;
 }
 footer{
 width: 100%;
