@@ -1,5 +1,7 @@
 body {
     background-color: #ffffff;
+    width: 100% !important;
+    height: 100% !important;
 }
 .header{
   width: 100%;
@@ -77,13 +79,36 @@ body {
 
 .subtitulo{
     font-family: 'thabitregular';
-    
     font-style: normal;
     font-weight: 500;
     font-size: 72px;
     line-height: 93px;
     text-transform: uppercase;
     margin-left: 50px;
+}
+.nomeProj1{
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 50px;
+    margin-left: 30px;
+}
+.nomeProj2{
+  font-family: 'thabitregular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
+  margin-left: 30px;
+}
+.nomeProj3{
+  font-family: 'thabitregular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
+  margin-left: 30px;
 }
 a:link, a:visited {
 	text-decoration: none
@@ -127,6 +152,10 @@ a:active {
 
 .ArteEManifestacoes:hover {
     text-decoration: 2px underline;
+}
+
+.Projetos:hover {
+  text-decoration: 2px underline;
 }
 
 .textoIlustrativo {
@@ -425,7 +454,7 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 1719px;
   height: 461.78px;
-  left: 122px;
+  margin-left: 60px;
   top: 2650px;
   display: flex;
   flex-wrap: wrap;
@@ -463,12 +492,22 @@ body::-webkit-scrollbar {
   border-radius: 4px;
 
 }
+.blocoBranco{
+  position: absolute;
+  width: 1719px;
+  height: 300.78px;
+  margin-left:0;
+  top: 3150px;
+  background-color:rgb(255, 255, 255);
+}
 
-/* .rodape { 
-    position: relative;
-    width: 100%;
+footer { 
+    position: absolute;
+    left: 0;
+    top: 3450px;
     height: 400px;
-    top: -200%;
+    width: 100%;
+    bottom: 0;
     background-color: black;
-}*/
+}
 
