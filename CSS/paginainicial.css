@@ -1,17 +1,31 @@
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: #ffffff;
 }
 
-.titulos {
-   color : black;
+#titulo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#titulo h1 {
+   color: black;
    text-align: center;
    font-family: 'thabitregular';
    font-style: normal;
    font-weight: 500;
    font-size: 115px;
    line-height: 149px;
-   color: black;
- }
+}
+
+#titulo img {
+  margin-top: 98px;
+}
 
  .todasImagens{
     width: 100%;
@@ -26,11 +40,11 @@ body {
 }
 
 .legenda {
-    position: absolute;
     width: 923px;
     height: 130px;
-    left: 497px;
-    top: 250px;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
     
    font-family: 'unnaregular';
    font-style: normal;
@@ -40,31 +54,25 @@ body {
    align-items: center;
    text-align: center;
    color : black;
-   text-align: center;
-   color: black;
 }
 
-
-.logoCaleidoscopio {
-    position: absolute;
-    left: 516px;
-    top: 300px;
+#animacao {
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
 }
 
-
-.animacao {
-    position: absolute;
-width: 300px;
-height: 500px;
-left: 835px;
-top: 420px;
-}
-
-.link
+a
 {
    color:rgb(0, 0, 0);
    text-decoration: none; 
    background-color: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .subtitulo{
@@ -90,12 +98,9 @@ a:active {
 
 
 .Acervo {
-    position: absolute;
-    width: 100px;
+    width: 100%;
     height: 30px;
-    left: 30px;
-    top: 800px;
-    margin-left:50px;
+    margin-left:86px;
 }
 
 .Acervo:hover {
@@ -103,219 +108,170 @@ a:active {
 }
 
 .ArteEManifestacoes {
-    position: absolute;
-    width: 2000px;
-    height: 30px;
-    left: 30px;
-    top: 1600px;
-    margin-left:50px;
+  width: 100%;
+  height: 30px;
+  margin-top: 400px;
+  margin-left:86px;
 }
 
 .ArteEManifestacoes:hover {
     text-decoration: underline;
 }
 
-.textoIlustrativo {
-    text-align: justify;
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    top: 86.48%;
-    bottom: 6.37%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 15px;
-    }
 
+#gap {
+  position: relative!important;
+  width: 100px !important;
+  height: 100%!important;
+  background-color: rgb(255, 255, 255);
 
-.imagAcervo1 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 10px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
+  flex: none;
+  z-index: 10;
+  scroll-snap-align: start;
+  cursor: none!important;
 }
 
-.imagAcervo1 img { 
+
+#items-wrapper {
+  width: 100vw;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+#items {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin-left: 20px;
+
+}
+
+#items img {
+  cursor: pointer;  
+}
+
+#item {
+  flex: none;
+
+  width: 25%;
+  height: 450px;
+
+  scroll-snap-align: start;
+  pointer-events: none;
+}
+
+#item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#item img:hover {
+  transform: scale(1.0);
+}
+
+
+
+
+
+
+
+#gap2 {
+  position: relative!important;
+  width: 100px !important;
+  height: 100%!important;
+  background-color: rgb(255, 255, 255);
+
+  flex: none;
+  z-index: 10;
+  scroll-snap-align: start;
+  cursor: none!important;
+}
+
+
+#items-wrapper2 {
+  width: 100vw;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+#items2 {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  margin-left: 20px;
+
+}
+
+#items2 img {
+  cursor: pointer;  
+}
+
+#item2 {
+  flex: none;
+
+  width: 25%;
+  height: 450px;
+
+  scroll-snap-align: start;
+  pointer-events: none;
+}
+
+#item2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#item2 img:hover {
+  transform: scale(1.0);
+}
+/*
+#hoverColection {
+    opacity: 1;
+    position: absolute;
+    height: 450px;
+    width: 30%;
+    background: rgba(0,0,0,.30);
+
+    display: block;
+    color: white;
+    transition: all 0.3s ease;
+}*/
+
+/*.imagAcervo1 img { 
     transition: all 0.5s;
   }
   .imagAcervo1:hover img {
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
-
-  .imagAcervo2 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 420px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo2 img { 
+  .imagAcervo1  { 
     transition: all 0.5s;
   }
-  .imagAcervo2:hover img {
+  .imagAcervo1:hover {
     transform: scale(1.1);
-  }
-
-  .imagAcervo3 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 830px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo3 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo3:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo4 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1240px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo4 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo4:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo5 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo5 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo5:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo6 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo6 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo6:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo7 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo7 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo7:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo8 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo8 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo8:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo9 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo9 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo9:hover img {
-    transform: scale(1.1);
-  }
-
+  }*/
 
 
 body::-webkit-scrollbar {
-   display: none; /* for Chrome, Safari, and Opera */  
+   display: none; /* for Chrome, Safari, and Opera  */
  }
-
+/*
  div {
    overflow-x: hidden;  
  }
- 
-
-.logoCaleidoscopio {
-   position: absolute;
-   
-   left: 73px;
-   top: 56px;
-}
+ */
 
 .rodape {
-    position: absolute;
-    width: 1080px;
-    height: 10px;
-    left: 269px;
-    top: 2356px;
-    background-color: white;
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+
+    background-color: wheat;
 }
 

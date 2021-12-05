@@ -27,7 +27,11 @@
     text-shadow: 2px 2px 7px #ffffff;
 }
   
+#hover {
+  opacity: 1;
+  background-color: wheat;
   
+}
 
 .legenda {
     
@@ -52,10 +56,6 @@ body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */  
   }
 
-  div {
-    overflow-x: hidden;  
-  }
-  
 
 .logoCaleidoscopio {
     position: absolute;
@@ -88,16 +88,20 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+#motherButtons {
+  width: 40%;
+  justify-content: space-around;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .botaoFiltrar {
     background-color: white; 
     color: black; 
-    position: relative;
     border: 2px solid rgb(73, 73, 73);
-    position: absolute;
     width: 145px;
     height: 63px;
-    left: 735px;
-    top: 517px;
+    margin: 15px;
 }
       
 .botaoFiltrar:hover {
@@ -110,11 +114,9 @@ body::-webkit-scrollbar {
     background-color: white; 
     color: black; 
     border: 2px solid rgb(73, 73, 73);
-    position: absolute;
     width: 208px;
     height: 63px;
-    left: 985px;
-    top: 517px;
+    margin: 15px;
 } 
 
 .botaoAdicionar:hover {
@@ -122,7 +124,15 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-
+#father {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 400px;
+}
 
 .textoIlustrativo {
     text-align: justify;
@@ -137,210 +147,18 @@ body::-webkit-scrollbar {
     font-size: 18px;
     line-height: 33px;
 }
-.figuraIlustrativaN1 {
-    position: absolute;
+.figuraIlustrativa{
     width: 350px;
-    height: 550px;
-    left: 88px;
-    top: 811px;
+    height: 450px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.figuraIlustrativa img { 
     object-fit: cover;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN1 img { 
     transition: all 0.5s;
   }
-  .figuraIlustrativaN1:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN2 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 561px;
-    top: 811px;
-    background: #E2E1E1;   
-    cursor: pointer;
-}
-
-.figuraIlustrativaN2 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN2:hover img {
-    transform: scale(1.1);
-  }
-
-
-.figuraIlustrativaN3 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1035px;
-    top: 811px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN3 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN3:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN4 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1508px;
-    top: 811px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN4 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN4:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN5 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 88px;
-    top: 1550px;
-    object-fit: cover;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN5 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN5:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN6 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 561px;
-    top: 1550px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN6 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN6:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN7 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1035px;
-    top: 1550px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN7 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN7:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN8 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1508px;
-    top: 1550px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN8 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN8:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN9 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 88px;
-    top: 2289px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN9 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN9:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN10 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1508px;
-    top: 2289px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN10 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN10:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN11 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 1035px;
-    top: 2289px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN11 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN11:hover img {
-    transform: scale(1.1);
-  }
-
-.figuraIlustrativaN12 {
-    position: absolute;
-    width: 350px;
-    height: 550px;
-    left: 561px;
-    top: 2289px;
-    background: #E2E1E1;
-    cursor: pointer;
-}
-
-.figuraIlustrativaN12 img { 
-    transition: all 0.5s;
-  }
-  .figuraIlustrativaN12:hover img {
+  .figuraIlustrativa:hover img {
     transform: scale(1.1);
   }
 
