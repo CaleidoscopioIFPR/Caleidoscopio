@@ -40,7 +40,7 @@ body {
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: 500;
-    font-size: 100px;
+    font-size: 120px;
     line-height: 130px;
     margin-bottom: 5px;
 }
@@ -99,7 +99,7 @@ body {
     height: 275px;
     left: 1053px;
     right: 150px;
-    top: 880px;
+    top: 990px;
 }
 .texto2{
     color:black;
@@ -111,7 +111,7 @@ body {
     height: 275px;
     left: 100px;
     right: 1100px;
-    top: 1595px;
+    top: 1700px;
 }
 .texto3{
     color:black;
@@ -123,7 +123,7 @@ body {
     height: 275px;
     left: 1053px;
     right: 150px;
-    top: 2300px;
+    top: 2430px;
 }
 .conteudo{
     font-family: 'unnaregular';
@@ -137,14 +137,14 @@ body {
     height: 474px;
     left: 150px;
     right: 1110px;
-    top: 880px;
+    top: 990px;
 }
 .imagem2 {
     position: absolute;
     height: 474px;
     left: 1055px;
     right: 1110px;
-    top: 1595px;
+    top: 1700px;
 
 }
 .imagem3 {
@@ -152,7 +152,7 @@ body {
     height: 474px;
     left: 150px;
     right: 1110px;
-    top: 2300px;
+    top: 2430px;
 }
 footer{
 width: 100%;
