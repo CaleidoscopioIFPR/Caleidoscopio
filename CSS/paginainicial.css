@@ -9,14 +9,6 @@ body {
 .header{
   width: 100%;
 }
-.logoFeia {
-  position: absolute;
-  width: 99px;
-  height: 91px;
-  left: 1264px;
-  top: 50px;
-}
-<<<<<<< HEAD
 
 #titulo {
   display: flex;
@@ -28,27 +20,19 @@ body {
 
 #titulo h1 {
    color: black;
-=======
-.titulos {
-   color : black;
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
    text-align: center;
    font-family: 'thabitregular';
    font-style: normal;
    font-weight: 500;
    font-size: 115px;
    line-height: 149px;
-<<<<<<< HEAD
 }
 
 #titulo img {
   margin-top: 98px;
 }
 
-=======
-   color: black;
- }
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
+
  .todasImagens{
     width: 100%;
     float: left;
@@ -86,20 +70,7 @@ body {
     align-items: center;
 }
 
-<<<<<<< HEAD
 a
-=======
-
-.animacao {
-  position: absolute;
-  width: 300px;
-  height: 500px;
-  left: 835px;
-  top: 420px;
-}
-
-.link
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
 {
    color:rgb(0, 0, 0);
    text-decoration: none; 
@@ -152,6 +123,7 @@ a:hover {
 a:active {
 	text-decoration: none
 	}
+
 .Acervo {
     width: 100%;
     height: 30px;
@@ -165,44 +137,26 @@ a:active {
 .ArteEManifestacoes {
   width: 100%;
   height: 30px;
-  margin-top: 400px;
+  margin-top: 300px;
   margin-left:86px;
 }
 
-.Projetos{
-  position: absolute;
-  width: 3000px;
-  height: 30px;
-  left: 30px;
-  top: 2400px;
-  margin-left:50px;
+.ArteEManifestacoes:hover {
+  text-decoration: 2px underline;
 }
 
-.ArteEManifestacoes:hover {
-    text-decoration: 2px underline;
+.Projetos{
+  width: 100%;
+  height: 30px;
+  margin-top: 300px;
+  margin-left:86px;
 }
 
 .Projetos:hover {
   text-decoration: 2px underline;
 }
 
-<<<<<<< HEAD
-=======
-.textoIlustrativo {
-    text-align: justify;
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    top: 86.48%;
-    bottom: 6.37%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 15px;
-    color: #000000; 
-    }
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
+
 
 #gap {
   position: relative!important;
@@ -290,7 +244,6 @@ a:active {
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   margin-left: 20px;
-
 }
 
 #items2 img {
@@ -340,143 +293,13 @@ a:active {
   }
   .imagAcervo1:hover {
     transform: scale(1.1);
-<<<<<<< HEAD
   }*/
 
-=======
-  }
 
-  .imagAcervo3 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 830px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo3 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo3:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo4 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1240px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo4 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo4:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo5 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo5 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo5:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo6 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo6 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo6:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo7 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo7 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo7:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo8 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo8 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo8:hover img {
-    transform: scale(1.1);
-  }
-
-  .imagAcervo9 {
-    position: absolute;
-    width: 300px;
-    height: 410px;
-    left: 1650px;
-    top: 1010px;
-    margin-left:50px;
-    background: #d7e5f0;
-    cursor: pointer;
-}
-
-.imagAcervo9 img { 
-    transition: all 0.5s;
-  }
-  .imagAcervo9:hover img {
-    transform: scale(1.1);
-  }
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
 
 body::-webkit-scrollbar {
    display: none; /* for Chrome, Safari, and Opera  */
  }
-<<<<<<< HEAD
 /*
  div {
    overflow-x: hidden;  
@@ -489,177 +312,5 @@ body::-webkit-scrollbar {
     margin-top: 200px;
 
     background-color: wheat;
-=======
-
-.logoCaleidoscopio {
-   position: absolute;
-   left: 73px;
-   top: 56px;
-}
-.textoIlustrativo2 {
-  text-align:left;
-  position: absolute;
-  width: 305px;
-  height: 84px;
-  left: 7px;
-  top: -125px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 35px;
-  color:white;
-  }
-.imagArte1{
-  position: absolute;
-  width: 300px;
-  height: 410px;
-  left: 10px;
-  top: 1785px;
-  margin-left:50px;
-  /* background: #d7e5f0; */
-  cursor: pointer;
-  border-top: 100px solid #000;
-}
-
-.imagArte1 img { 
-  transition: all 0.5s;
-}
-.imagArte1:hover img {
-  transform: scale(1.1);
-}
-
-.imagArte2 {
-  position: absolute;
-  width: 300px;
-  height: 410px;
-  left: 420px;
-  top: 1785px;
-  margin-left:50px;
-  cursor: pointer;
-  border-top: 100px solid #000;
-}
-
-.imagArte2 img { 
-  transition: all 0.5s;
-}
-.imagArte2:hover img {
-  transform: scale(1.1);
-}
-
-.imagArte3 {
-  position: absolute;
-  width: 300px;
-  height: 410px;
-  left: 830px;
-  top: 1785px;
-  margin-left:50px;
-  border-top: 100px solid #000;
-  cursor: pointer;
-}
-
-.imagArte3 img { 
-  transition: all 0.5s;
-}
-.imagArte3:hover img {
-  transform: scale(1.1);
-}
-
-.imagArte4 {
-  position: absolute;
-  width: 300px;
-  height: 410px;
-  left: 1240px;
-  top: 1785px;
-  margin-left:50px;
-  border-top: 100px solid #000;
-  cursor: pointer;
-}
-
-.imagArte4 img { 
-  transition: all 0.5s;
-}
-.imagArte4:hover img {
-  transform: scale(1.1);
-}
-
-.imagArte5 {
-  position: absolute;
-  width: 300px;
-  height: 410px;
-  left: 1650px;
-  top: 1785px;
-  margin-left:50px;
-  border-top: 100px solid #000;
-  cursor: pointer;
-}
-
-.imagArte5 img { 
-  transition: all 0.5s;
-}
-.imagArte5:hover img {
-  transform: scale(1.1);
-}
-
-.blocos{
-  position: absolute;
-  width: 1719px;
-  height: 461.78px;
-  margin-left: 60px;
-  top: 2650px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.bloco-dançart{
-  height: 461.7777099609375px;
-  width: 565px;
-  left: 122px;
-  top: 3328.0517578125px;
-  border-radius: 4px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-}
-.bloco-rabiscando{
-  height: 461.7777099609375px;
-  width: 565px;
-  left: 699px;
-  top: 3328.0517578125px;
-  border-radius: 4px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-}
-.bloco-poesiando{
-  height: 461.7777099609375px;
-  width: 565px;
-  top: 3328.0517578125px;
-  border-radius: 4px;
-  left: 1276px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-
-}
-.blocoBranco{
-  position: absolute;
-  width: 1719px;
-  height: 300.78px;
-  margin-left:0;
-  top: 3150px;
-  background-color:rgb(255, 255, 255);
-}
-
-footer { 
-    position: absolute;
-    left: 0;
-    top: 3450px;
-    height: 400px;
-    width: 100%;
-    bottom: 0;
-    background-color: black;
->>>>>>> 3d738b1892548865b76b69e9081801d5ec6a9630
 }
 
