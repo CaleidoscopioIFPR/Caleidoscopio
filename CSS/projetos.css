@@ -1,16 +1,10 @@
 body {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     margin: 0 auto;
     }
 
 .blocos {
-=======
-    margin: 0;
-}
-.bloco1 {
->>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
     background-color: #CE7D7D;
     opacity: 1;
     height: 450px;
@@ -138,7 +132,6 @@ body {
     font-weight: normal;
     font-size: 48px;
     line-height: 55px;
-<<<<<<< HEAD
     position: absolute;
     margin-left: 50%;
 }
@@ -157,59 +150,9 @@ footer{
     bottom: 0px;
 }
 
+/*
 .redes-sociais ul li{
     display: inline-block;
     float:left;
 
-=======
-}
-.imagem1 {
-    position: absolute;
-    height: 474px;
-    left: 150px;
-    right: 1110px;
-    top: 990px;
-}
-.imagem2 {
-    position: absolute;
-    height: 474px;
-    left: 1055px;
-    right: 1110px;
-    top: 1700px;
-
-}
-.imagem3 {
-    position: absolute;
-    height: 474px;
-    left: 150px;
-    right: 1110px;
-    top: 2430px;
-}
-footer{
-width: 100%;
-height: 300px;
-bottom: 0px;
-}
-#instagram {
-position: absolute;
-left: 12.98%;
-right: 84.99%;
-top: 38.26%;
-bottom: 51.62%;
-}
-
-#twitter{
-position: absolute;
-left: 22.66%;
-right: 75.31%;
-top: 38.26%;
-bottom: 51.62%;
-}
-#youtube {
-position: absolute;
-left: 17.82%;
-right: 80.15%;
-top: 38.26%;
-bottom: 51.62%;
->>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
-}
+}*/
