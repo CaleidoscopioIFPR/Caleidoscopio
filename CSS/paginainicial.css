@@ -238,7 +238,6 @@ a:active {
 
 #items2 {
   display: flex;
-  flex-direction: row-reverse;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
