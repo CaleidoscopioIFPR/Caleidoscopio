@@ -131,7 +131,7 @@ body::-webkit-scrollbar {
   width: 90%;
   margin: 0 auto;
   padding: 10px;
-  margin-top: 400px;
+  margin-top: 300px;
 }
 
 .textoIlustrativo {
@@ -163,13 +163,12 @@ body::-webkit-scrollbar {
   }
 
 
-.rodape {
-    position: absolute;
-    width: 1080px;
-    height: 10px;
-    left: 269px;
-    top: 3356px;
-    background-color: white;
+  .rodape {
+    width: 100%;
+    height: 200px;
+    margin-top: 400px;
+
+    background-color: wheat;
 }
 
 @keyframes fadeIn {
