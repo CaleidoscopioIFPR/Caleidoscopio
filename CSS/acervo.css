@@ -1,3 +1,10 @@
+.body {
+     width: 100%;
+     height: 100%;
+     margin: 0 auto;
+}
+
+
 .titulos {
     color : black;
     text-align: center;
@@ -5,8 +12,27 @@
     font-style: normal;
     font-weight: 500;
     font-size: 100px;
-    line-height: 130px;
+    line-height: 80px;
+    color: black;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+  }
+
+  .titulosShadow {
+    background-color: #cccccc;
+    color: #000000;
+    text-shadow: 2px 2px 7px #ffffff;
 }
+  
+#hover {
+  opacity: 1;
+  background-color: wheat;
+  
+}
+
 .legenda {
     
     font-family: 'thabitregular';
@@ -16,4 +42,166 @@
     line-height: 32px;
     align-items: center;
     text-align: center;
-    }
+    color : black;
+    text-align: center;
+    color: black;
+    animation: fadeIn linear 3s;
+    -webkit-animation: fadeIn linear 3s;
+    -moz-animation: fadeIn linear 3s;
+    -o-animation: fadeIn linear 3s;
+    -ms-animation: fadeIn linear 3s;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */  
+  }
+
+
+.logoCaleidoscopio {
+    position: absolute;
+    
+    left: 73px;
+    top: 56px;
+}
+
+.textoBotao {
+    font-family: Thabit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.botao {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#motherButtons {
+  width: 40%;
+  justify-content: space-around;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.botaoFiltrar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(73, 73, 73);
+    width: 145px;
+    height: 63px;
+    margin: 15px;
+}
+      
+.botaoFiltrar:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+ }
+
+
+.botaoAdicionar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(73, 73, 73);
+    width: 208px;
+    height: 63px;
+    margin: 15px;
+} 
+
+.botaoAdicionar:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+}
+
+#father {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 400px;
+}
+
+.textoIlustrativo {
+    text-align: justify;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 82.48%;
+    bottom: 6.37%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 33px;
+}
+.figuraIlustrativa{
+    width: 350px;
+    height: 450px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.figuraIlustrativa img { 
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+  .figuraIlustrativa:hover img {
+    transform: scale(1.1);
+  }
+
+
+.rodape {
+    position: absolute;
+    width: 1080px;
+    height: 10px;
+    left: 269px;
+    top: 3356px;
+    background-color: white;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+/**#test{
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 
+}*/
+

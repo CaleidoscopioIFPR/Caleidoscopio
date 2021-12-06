@@ -1,26 +1,57 @@
 body {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     margin: 0 auto;
     }
 
 .blocos {
+=======
+    margin: 0;
+}
+.bloco1 {
+>>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
     background-color: #CE7D7D;
     opacity: 1;
-    padding-top: 5%;
-    height: 500px;
+    height: 450px;
 }
-
+.bloco2 {
+    background-color:#F8EB7E ;
+    opacity: 1;
+    height: 450px;
+}
+.bloco3{
+    background-color: #97D382;
+    opacity: 1;
+    height: 450px
+}
+.orientaçaoCont{ 
+    align-content: center;
+}
+.gifFofo{
+    position:absolute;
+    top: 5px;
+    left: 155px;
+}
+.gifFofo2{
+    position:absolute;
+    top: 5px;
+    right: 155px;
+}
+.cabeçalho{ 
+    margin-bottom: 350px;
+}
 .titulos {
     color : black;
     text-align: center;
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: 500;
-    font-size: 100px;
+    font-size: 120px;
     line-height: 130px;
+    margin-bottom: 5px;
 }
-.titulos1 {
+.subtitulo1 {
     color : black;
     position: relative;
     text-align:left;
@@ -29,11 +60,34 @@ body {
     font-weight: 500;
     font-size: 100px;
     line-height: 130px;
+    text-transform: uppercase;
+    margin-left: 150px;
 }
-
-
+.subtitulo2 {
+    color : black;
+    position: relative;
+    text-align:right;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+    text-transform: uppercase;
+    margin-right: 200px;
+}
+.subtitulo3 {
+    color : black;
+    position: relative;
+    text-align:left;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 130px;
+    text-transform: uppercase;
+    margin-left: 150px;
+}
 .legenda {
-    
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: bold;
@@ -42,14 +96,49 @@ body {
     align-items: center;
     text-align: center;
 }
-
-.conteudo {
-
+.texto1{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 20px;
+    position: absolute;
+    height: 275px;
+    left: 1053px;
+    right: 150px;
+    top: 990px;
+}
+.texto2{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 20px;
+    position: absolute;
+    height: 275px;
+    left: 100px;
+    right: 1100px;
+    top: 1700px;
+}
+.texto3{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 20px;
+    position: absolute;
+    height: 275px;
+    left: 1053px;
+    right: 150px;
+    top: 2430px;
+}
+.conteudo{
     font-family: 'unnaregular';
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
     line-height: 55px;
+<<<<<<< HEAD
     position: absolute;
     margin-left: 50%;
 }
@@ -72,4 +161,55 @@ footer{
     display: inline-block;
     float:left;
 
+=======
+}
+.imagem1 {
+    position: absolute;
+    height: 474px;
+    left: 150px;
+    right: 1110px;
+    top: 990px;
+}
+.imagem2 {
+    position: absolute;
+    height: 474px;
+    left: 1055px;
+    right: 1110px;
+    top: 1700px;
+
+}
+.imagem3 {
+    position: absolute;
+    height: 474px;
+    left: 150px;
+    right: 1110px;
+    top: 2430px;
+}
+footer{
+width: 100%;
+height: 300px;
+bottom: 0px;
+}
+#instagram {
+position: absolute;
+left: 12.98%;
+right: 84.99%;
+top: 38.26%;
+bottom: 51.62%;
+}
+
+#twitter{
+position: absolute;
+left: 22.66%;
+right: 75.31%;
+top: 38.26%;
+bottom: 51.62%;
+}
+#youtube {
+position: absolute;
+left: 17.82%;
+right: 80.15%;
+top: 38.26%;
+bottom: 51.62%;
+>>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
 }
