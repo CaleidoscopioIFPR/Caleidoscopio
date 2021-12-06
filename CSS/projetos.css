@@ -1,16 +1,9 @@
 body {
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-    margin: 0 auto;
-    }
-
-.blocos {
-=======
     margin: 0;
 }
 .bloco1 {
->>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
     background-color: #CE7D7D;
     opacity: 1;
     height: 450px;
@@ -138,30 +131,6 @@ body {
     font-weight: normal;
     font-size: 48px;
     line-height: 55px;
-<<<<<<< HEAD
-    position: absolute;
-    margin-left: 50%;
-}
-
-
-#dancart{
-position: absolute;
-left: 5%;
-right:80%;
-
-}
-
-footer{
-    width: 100%;
-    height: 300px;
-    bottom: 0px;
-}
-
-.redes-sociais ul li{
-    display: inline-block;
-    float:left;
-
-=======
 }
 .imagem1 {
     position: absolute;
@@ -211,5 +180,4 @@ left: 17.82%;
 right: 80.15%;
 top: 38.26%;
 bottom: 51.62%;
->>>>>>> 5c03818086e297f1ba8cbb3483bd3247bdeeafd6
 }

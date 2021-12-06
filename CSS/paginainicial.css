@@ -303,17 +303,15 @@ a:active {
   margin-left: 30px;
 }
 
-.blocos{
+#blocos{
   width: 100%;
-  margin-top: 200px;
-  margin-left: 60px;
-  margin-right: 30px;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .bloco-dançart{
-  width: 565px;
+  width: 555px;
   height: 505px;
   border-radius: 4px;
   margin-bottom: 10px;
@@ -324,7 +322,7 @@ a:active {
   cursor: pointer;
 }
 .bloco-rabiscando{
-  width: 565px;
+  width: 555px;
   height: 505px;
   border-radius: 4px;
   margin-right: 30px;
@@ -335,7 +333,7 @@ a:active {
   cursor: pointer;
 }
 .bloco-poesiando{
-  width: 565px;
+  width: 555px;
   height: 505px;
   border-radius: 4px;
   margin-right: 30px;
