@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fbfbf8;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden!important;
+}
+.header{
+  width: 100%;
+}
+#titulo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+#titulo h1 {
+     color: black;
+     text-align: center;
+     font-family: 'unna';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 115px;
+     line-height: 149px;
+     text-transform: lowercase;
+  }
+.conteudo{
+    display: flex;
+    justify-content: space-around;
+}
+#feedback{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+    
+}
+#endereço{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+}
+.texto1{
+    word-break: break-word;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 27,65px;
+    text-align: center;
+    color : black;
+}  
+.texto2{
+    word-break: break-word;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 520;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 27,65px;
+    text-align: center;
+    color : black; 
+    padding-top: 0.5rem;
+}

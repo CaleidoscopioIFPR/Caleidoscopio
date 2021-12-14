@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fbfbf8;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden!important;
+}
+.LogoCaleidoscopio input{
+  padding: 1rem;
+}
+header{
+    padding: 0 5rem 0 5rem;
+  }
+.cabecalho{
+  display:flex;
+  justify-content: space-between;
+  }
+#cabecalho-textos{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+#titulo {
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    width: 100%;
+  }  
+.titulo {
+    color: black;
+    text-align: right;
+    font-family: 'thabitregular';
+    font-style: normal;
+    font-size: 90px;
+    font-weight: 500;
+    padding-right: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+#legenda{
+    display: flex;
+    margin: 0 auto;
+}
+.legenda1{
+    color:black;
+    font-family:'Unna';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 24px;
+}
+#animacao{
+  width: 30%;
+}
+#devs{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5rem 0 5rem;
+}
+.dev {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dev img {
+  width: 300px;
+  height: 300px;
+}
+.dev p{
+  font-family: 'unnaregular';
+  font-style: normal;
+  width: 200px;
+  word-break: break-word;
+  font-size: 24px;
+  text-align: center;
+}
+#devsFotos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+#devsFotos img{
+    width: 700px;
+}
