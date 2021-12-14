@@ -86,3 +86,7 @@ header{
 #devsFotos img{
     width: 700px;
 }
+body::-webkit-scrollbar {
+  display: none;
+  
+}
