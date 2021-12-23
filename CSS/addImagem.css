@@ -128,20 +128,66 @@ input[type=submit]:hover {
 
  
 #MotherUploadTag {
-  width: 50%;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin: 4rem auto;
+    text-align: center;
+    display: flex;
 }
 
-.upload {
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgb(73, 73, 73);
-    width: 300px;
-    height: 20px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+.botaoUpload {    
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    display: flex;
+    text-align: center;
+    margin-right: 5rem;
+}
+
+.botaoSelect {
+    vertical-align: middle;
+    margin-top: 1.2rem;
+    font-size: 30px;
+    display: flex;
+
+    text-align: center;
+ 
+}
+
+.projeto {
+    margin-top: 2rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    
+}
+
+label {
+  width: 10rem;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  border-radius: 6rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#file-chosen {
+    margin-left: 15px;
+    margin-right: 30px;
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+select {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+    font-size: 1.1rem;
+    padding: 0.5em 1.5em;
+    background-color: black;
+    color: white;
 }
 
 

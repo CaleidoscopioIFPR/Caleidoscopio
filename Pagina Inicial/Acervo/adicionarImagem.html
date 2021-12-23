@@ -10,8 +10,8 @@
     <meta name="robots" content="dofollow" />
     <meta http-equiv="author" content="Brenda Alves, Gabriel Brasil e Gabriel Soler" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" type="text/css" href="../../css/addImagem.css">
-    <link rel="stylesheet" type="text/css" href="CSS/Fonts/thabitregular/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/addImagem.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/thabitregular/stylesheet.css">
     <script src="https://kit.fontawesome.com/70fa70d7b9.js" crossorigin="anonymous"></script>
 </head>
 
@@ -39,13 +39,17 @@
             <textarea class="descricaoInput" name="descricao" cols="50" rows="5" maxlength="255" placeholder="Descreva o momento"></textarea>            
         </fieldset>
 
-        <div id="motherUploadTag">
-            <div class="upload">
-                <input type="file" name="arquivoImagem">
+        <div id="MotherUploadTag">
+            <div class="botaoUpload">
+                <input type="file" name="arquivoImagem" id="uploadBtn" value="Escolha o arquivo" hidden/>
+                <label for="uploadBtn">Escolha o arquivo</label>
+                <span id="file-chosen">Nenhum arquivo escolhido</span>
             </div>
-
-            <div class="upload">
-                Projeto pertencente:
+            
+            
+            
+            <div class="botaoSelect">           
+                <!-- <p class="projeto">Projeto pertencente:</p> -->
                 <select name="meios">
                     <option value="dancart">Dançart</option>
                     <option value="rabiscando">Rabiscando</option>
@@ -58,5 +62,5 @@
     </form>
 
     <footer class="rodape"></footer>
-
+    <script src="../../js/botaoUpload.js"></script>
 </body>
