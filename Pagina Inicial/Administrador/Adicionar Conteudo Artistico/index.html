@@ -10,8 +10,8 @@
     <meta name="robots" content="dofollow" />
     <meta http-equiv="author" content="Brenda Alves, Gabriel Brasil e Gabriel Soler" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" type="text/css" href="../../CSS/addImagem.css">
-    <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/thabitregular/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../../../CSS/addConteudoArtistico.css">
+    <link rel="stylesheet" type="text/css" href="../../../CSS/Fonts/Unna/stylesheet.css">
     <script src="https://kit.fontawesome.com/70fa70d7b9.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,24 +19,24 @@
 
     <header>
         <div class="LogoCaleidoscopio">
-            <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
+            <a href="../../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Acervo/Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
-        <div id="icone">
-            <i class="fas fa-plus addIcon"></i>
-            <i class="fas fa-image pictureIcon"></i>
+        <div class="tiulos">
+            <h1 class="titulos"> Adicionar conteúdo <br> artístico </h1>
         </div>
-    </header>
 
+    </header>
+    
     <form id="formulario">
 
         <fieldset class="fieldsetForm1">
-            <legend> Dê um título à sua obra</legend>           
-            <input class="tituloInput" type="text" name="titulo" size="50" required="required" placeholder="Título">
+            <legend> Título</legend>           
+            <input class="tituloInput" type="text" name="titulo" size="50" required="required">
         </fieldset>
 
         <fieldset class="fieldsetForm2" >
-            <legend> Descreva o momento</legend>
-            <textarea class="descricaoInput" name="descricao" cols="50" rows="5" maxlength="255" placeholder="Descreva o momento"></textarea>            
+            <legend> Conteúdo</legend>
+            <textarea class="descricaoInput" name="descricao" cols="50" rows="15" maxlength=""></textarea>            
         </fieldset>
 
         <div id="MotherUploadTag">
@@ -62,5 +62,7 @@
     </form>
 
     <footer class="rodape"></footer>
-    <script src="../../js/botaoUpload.js"></script>
+    <script src="../../../js/botaoUpload.js"></script>
 </body>
+
+</html>

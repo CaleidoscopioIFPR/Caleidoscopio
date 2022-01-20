@@ -27,10 +27,20 @@
 
 <body style="background-color: #fbfbf8;">
 
-    <header></header>
-    <div id="Menu">
+    <header>
+        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <ul>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Acervo</a></li>
+                <li><a href="#">Arte e suas manifestações</a></li>
+                <li><a href="#">Quem somos</a></li>
+            </ul>
+        </nav>
 
-    </div>
+    </header>
+
     <div class="cabeçalho">
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
@@ -90,7 +100,9 @@
         </div>
     </div>
     </div>
-
+    <div style = "font-size: 80px;">
+        <i class="fab fa-instagram"></i>
+    </div>
 
     <!--
     <footer class="footer" >
@@ -104,6 +116,15 @@
 
     </footer>
     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(".btn-menu").click(function(){
+            $(".menu").show();
+        });
+        $(".btn-close").click(function(){
+            $(".menu").hide();
+        })
+    </script>
 </body>
 
 </html>

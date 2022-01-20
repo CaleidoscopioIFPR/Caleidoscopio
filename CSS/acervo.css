@@ -26,15 +26,15 @@
     color: #000000;
     text-shadow: 2px 2px 7px #ffffff;
 }
-  
+
 #hover {
   opacity: 1;
   background-color: wheat;
-  
+
 }
 
 .legenda {
-    
+
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: bold;
@@ -53,13 +53,13 @@
 }
 
 body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */  
+    display: none; /* for Chrome, Safari, and Opera */
   }
 
 
 .logoCaleidoscopio {
     position: absolute;
-    
+
     left: 73px;
     top: 56px;
 }
@@ -96,14 +96,14 @@ body::-webkit-scrollbar {
 }
 
 .botaoFiltrar {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 2px solid rgb(73, 73, 73);
     width: 145px;
     height: 63px;
     margin: 15px;
 }
-      
+
 .botaoFiltrar:hover {
     background-color:rgb(0, 0, 0);
     color: white;
@@ -111,13 +111,13 @@ body::-webkit-scrollbar {
 
 
 .botaoAdicionar {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
     border: 2px solid rgb(73, 73, 73);
     width: 208px;
     height: 63px;
     margin: 15px;
-} 
+}
 
 .botaoAdicionar:hover {
     background-color:rgb(0, 0, 0);
@@ -154,7 +154,7 @@ body::-webkit-scrollbar {
     margin: 30px;
 }
 
-.figuraIlustrativa img { 
+.figuraIlustrativa img {
     object-fit: cover;
     transition: all 0.5s;
   }
@@ -175,22 +175,22 @@ body::-webkit-scrollbar {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  
+
   @-moz-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  
+
   @-webkit-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  
+
   @-o-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  
+
   @-ms-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
@@ -201,6 +201,6 @@ body::-webkit-scrollbar {
     font-size: 21px;
     text-align: center;
 
-    animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 
+    animation: fadein 2s; /* Safari, Chrome and Opera > 12.1
 }*/
 
