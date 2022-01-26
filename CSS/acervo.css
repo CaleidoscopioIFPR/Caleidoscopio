@@ -27,10 +27,22 @@
     text-shadow: 2px 2px 7px #ffffff;
 }
 
-#hover {
-  opacity: 1;
-  background-color: wheat;
+.hover {
+  opacity: 0;
+  background-color: black;
+  color: white;
+  width: 290px;
+  height: 390px;
+  font-size: 20px;
+  padding: 30px;
+  text-align: center;
+  position: absolute;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
 
+.hover:hover {
+  transform: scale(1.1);
 }
 
 .legenda {
@@ -155,12 +167,18 @@ body::-webkit-scrollbar {
 }
 
 .figuraIlustrativa img {
+    
     object-fit: cover;
     transition: all 0.5s;
+    width: 350px;
+    height: 450px;
   }
+
   .figuraIlustrativa:hover img {
     transform: scale(1.1);
+    opacity: 0.1;
   }
+
 
 
   .rodape {
@@ -195,6 +213,55 @@ body::-webkit-scrollbar {
     0% {opacity:0;}
     100% {opacity:1;}
   }
+
+  #fundo {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    opacity: 0.5;
+    display: none;
+    z-index: 99;
+}
+
+#imgHighlight {
+    display: none;
+    position: fixed;
+    
+    height: 700px;
+    width: 900px;
+    left: 26%;
+    top: 10%;
+    z-index: 100;
+}
+
+#one {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.5s;
+    transform: rotate(45deg) translate(-1px, 5px);
+}
+
+#two {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.5s;
+    transform: rotate(-45deg) translate(2px, -10px);
+}
+
+.menu-toggleSearch {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 420px;
+    top: 120px;
+    cursor: pointer;
+}
 
 /**#test{
     margin-top: 25px;

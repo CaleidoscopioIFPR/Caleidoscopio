@@ -290,6 +290,7 @@ td {
     justify-content: space-between;
     align-items: center;
     padding: .5rem .7rem;
+    flex-wrap: wrap;
 }
 
 .info {
