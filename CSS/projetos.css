@@ -22,12 +22,11 @@ body {
     flex-wrap:nowrap;
     justify-content:space-around;
     align-items: center;
-    background-color: #CE7D7D;
     opacity: 1;
     height:fit-content;
     padding: 30px;
 }
-.bloco .texto1{
+.bloco .texto{
     color:black;
     font-family:'Unna';
     font-style:normal;
@@ -36,25 +35,42 @@ body {
     justify-content: end;
     max-width: 400px;
     display: flex;
-    
-    
+    text-align: right;
 }
-.subtitulo-esquerda{
+.subtitulo{
+    display: flex;
     font-family: 'thabitregular';
     font-style: normal;
     font-weight: 500;
     font-size: 6.25em;
     line-height: 130px;
     text-transform: uppercase;
+}
+.esquerda{
     margin-left: 9%;
+    justify-content: left;
+    text-align: left;
+}
+.direita {
+    margin-right: 9%;
+    justify-content: right;
+    text-align: right;
+    
 }
 .imagem {
     display: flex;
-    height: 474px;
+    height: 350px;
+    width: 650px;
+    object-fit: cover;
+    margin: 10px;
 }
 @media (max-width: 700px){
+    .subtitulo {font-size: 5em;}
     .bloco {flex-direction: column;}
-    .imagem {height: 300px;}
+    .imagem {height: 175px; width: 320px;}
+    .bloco .texto{font-size: 1.25em; text-align: center;}
+    .esquerda {margin:0;text-align: center; justify-content: center;}
+    .direita{margin:0;text-align: center; justify-content: center;}
 }
 
 /*CABEÇALHO*/
