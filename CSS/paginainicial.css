@@ -136,147 +136,63 @@ a:active {
 }
 
 
-
-#gap {
-  position: relative!important;
-  width: 100px !important;
-  height: 100%!important;
-  background-color: rgb(255, 255, 255);
-
-  flex: none;
-  z-index: 10;
-  scroll-snap-align: start;
-  cursor: none!important;
-}
-
-
-#items-wrapper {
+.items-wrapper {
   width: 100vw;
   margin-top: 100px;
   padding: 30px;
 }
 
-#items {
+.items {
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   margin-left: 20px;
   margin-right: 40px;
-  cursor: pointer;
 }
 
-#item {
+.item {
   flex: none;
-
+  margin-left: 2rem;
+  margin-right: 2rem;
   width: 25%;
   height: 450px;
-
+  cursor: pointer;
   scroll-snap-align: start;
-  pointer-events: none;
+}
+.item:first-of-type {
+  margin-left: 0 ;
 }
 
-#items::-webkit-scrollbar {
+.item:last-of-type{
+  margin-right: 0;
+}
+
+.items::-webkit-scrollbar {
   width: 10px;
 }
 
-#items::-webkit-scrollbar-track {
+.items::-webkit-scrollbar-track {
   background-color: #e4e4e4;
     border-radius: 100px;
 }
 
-#items::-webkit-scrollbar-thumb {
+.items::-webkit-scrollbar-thumb {
     background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
     box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
     border-radius: 100px;
 }
 
-#items img {
-  cursor: pointer;  
-}
-
-#item img {
+.item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#item img:hover {
+.item img:hover {
   transform: scale(1.0);
 }
 
-
-
-
-
-
-
-#gap2 {
-  position: relative!important;
-  width: 100px !important;
-  height: 100%!important;
-  background-color: rgb(255, 255, 255);
-
-  flex: none;
-  z-index: 10;
-  scroll-snap-align: start;
-  cursor: none!important;
-}
-
-
-#items-wrapper2 {
-  width: 100vw;
-  margin-top: 100px;
-  padding: 30px;
-}
-
-#items2 {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  margin-left: 20px;
-}
-
-#items2::-webkit-scrollbar {
-  width: 10px;
-}
-
-#items2::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
-    border-radius: 100px;
-}
-
-#items2::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
-    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
-    border-radius: 100px;
-}
-
-#items2 img {
-  cursor: pointer;  
-}
-
-#item2 {
-  flex: none;
-
-  width: 25%;
-  height: 450px;
-
-  scroll-snap-align: start;
-  pointer-events: none;
-}
-
-#item2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#item2 img:hover {
-  transform: scale(1.0);
-}
 
 #blocos {
   display: flex;
