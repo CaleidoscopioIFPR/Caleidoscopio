@@ -17,7 +17,7 @@
 </head>
 <header>
     <div class="LogoCaleidoscopio">
-        <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Imagens/logoCaleidoscopio.png"
+        <a href="../../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Imagens/logoCaleidoscopio.png"
                 width="85" heigh="85" alt="logo"> </a>
     </div>
     <button class = "btn-menu"><i class="fas fa-bars"></i></button>
@@ -29,26 +29,44 @@
             <li><a href="#">Acervo</a></li>
             <li><a href="#">Arte e suas manifestações</a></li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="/PaginaInicial/Login/Cadastro/index.html">Perfil</a></li>
+            <li><a href="../../Login/Cadastro/index.html">Perfil</a></li>
         </ul>
     </nav>
 
 </header>
 <body>
     <h1 class = titulo>Criar Conta</h1>
+    <div class = wrapper>
+        <form class ="formulario">
+            <div class = area-cadastro>
+                <legend> Digite seu nome</legend>           
+                <input class="tituloInput" type="text" name="nome" size="50" required="required">
 
-        <legend> Digite seu nome</legend>           
-        <input class="tituloInput" type="text" name="titulo" size="50" required="required">
+                <legend> Digite seu e-mail</legend>           
+                <input class="input" type="email" name="e-mail" size="50" required="required">
 
-        <legend> Digite seu e-mail</legend>           
-        <input class="tituloInput" type="text" name="titulo" size="50" required="required">
+                <div class = senha-olho>
+                    <legend> Digite sua senha</legend>
+                    <img id =eyeSVG width="30px" src="eye-regular.svg" onclick="eyeClick()"></img>
+                </div>
+                <input class="input" id= "password" type="password" name="senha" size="50" required="required">
 
-        <legend> Digite sua senha</legend>           
-        <input class="tituloInput" type="text" name="titulo" size="50" required="required">
+                <legend> Confirme sua senha</legend>
+                <input class="input" type="password" name="confirma-senha" size="50" required="required">
 
-        <legend> Confirme sua senha</legend>           
-        <input class="tituloInput" type="text" name="titulo" size="50" required="required">
-
-
+            </div>
+            <button type="submit" name ="criar-conta">Criar conta</button>
+        </form>
+    </div>
+ <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(".btn-menu").click(function(){
+            $(".menu").show();
+        });
+        $(".btn-close").click(function(){
+            $(".menu").hide();
+        })
+    </script>
+    <script src= "../../../js/senha.js"></script>
 </body>
 </html>

@@ -11,22 +11,6 @@ body{
     margin:0;
     background-color: #fbfbf8;
 }
-legend {
-    font-family: 'unnaregular';
-    font-style: normal;
-    font-weight: 520;
-    font-size: 24px;
-    line-height: 27,65px;
-    color : black;
-
-    margin: 50px auto;
-    margin-bottom: 25px;
-    padding: 25px;
-    width: 40%;
-    border-radius: 4px;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
 .titulo {
     color : black;
     text-align: center;
@@ -36,8 +20,72 @@ legend {
     font-size: 6.25em;
     line-height: 80px;
     color: black;
-    margin-top: 200px;
+    margin-top: 125px;
   }
+.wrapper{
+    width: 800px;
+    margin: 5% auto;
+
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1.9em;
+    justify-content: center;
+}
+.area-cadastro{
+    flex: 1;
+}
+.area-cadastro legend {
+    display:flex;
+    justify-content: left;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-weight: 520;
+    font-size: 1.5em;
+    color : black;
+
+}
+.area-cadastro input{
+    display: flex;
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+form button{
+    border: 0;
+    padding: 16px 32px;
+    border-radius: 15px;
+    font-size: 1.25em;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid rgb(73, 73, 73);
+    justify-content: center;
+
+}
+form button:hover{
+    background-color: black;
+    color: white;
+}
+.senha-olho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.senha-olho img:hover{
+    cursor: pointer;
+}
+  /* HEADER */
   header {
     background-color:#fbfbf8;;
     width: 100%;
