@@ -1,0 +1,108 @@
+.obra-info{
+    display: flex;
+    padding: 2rem 6rem;
+    justify-content: space-between;
+}
+.obra-img{
+    background-color: #bababa;
+    padding: 2rem;
+
+}
+.obra-txt{
+    width: 57%;
+}
+.obra-titulo{
+    color : black;
+    font-family: 'thabitregular';
+    font-style: none;
+    font-size: 5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.obra-desc{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    overflow: auto;
+    max-height: 500px;
+}
+.obra-img img{
+    height: 600px;
+    width: 550px;
+}
+::-webkit-scrollbar {
+    width:8px;
+    height: 10px;
+   
+    }
+     
+    /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro/
+    ::-webkit-scrollbar-track {
+    background:#333;
+    }
+     
+    / aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+     border-radius: 10px;    
+    background: #bababa;
+    }
+
+    .imagem-wrapper{
+        display: flex;
+        flex-direction: column;
+        background-color: #bababa;
+        padding: 1rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        cursor: pointer;
+        transition: transform .2s;
+    }
+    .imagem-wrapper:hover{
+        transform: scale(0.9);
+    }
+    .imagem-wrapper:first-of-type{
+        margin-left: 0;
+    }
+    .imagem-wrapper:last-of-type{
+        margin-right: 0;
+    }
+    .imagem {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .lista-imgs{
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        margin-left: 20px;
+        margin-right: 40px;
+        padding-top: 5rem;
+    }
+    .descricao-img{
+        max-width: 450px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: 'thabitregular';
+        font-style: none;
+       
+    }
+    .lista-imgs a{
+         text-decoration: none;
+        color:black;
+        font-size: 20px;
+    }
+    .lista-imgs a:visited{
+        text-decoration: none;
+    }
+    .lista-imgs::-webkit-scrollbar-track {
+        background-color: none;
+          border-radius: 100px;
+      }
+      
+      .lista-imgs::-webkit-scrollbar-thumb {
+          background-color: #000000;
+          border-radius: 100px;
+      }

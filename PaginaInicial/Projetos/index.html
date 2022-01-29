@@ -30,17 +30,23 @@
     <header>
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
-                    width="85" heigh="85" alt="logo"> </a>
+                    width="85" alt="logo"> </a>
         </div>
         <button class = "btn-menu"><i class="fas fa-bars"></i></button>
         <nav class = "menu">
             <a class = "btn-close"><i class="fas fa-times"></i></a>
-            <ul>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Acervo</a></li>
-                <li><a href="#">Arte e suas manifestações</a></li>
-                <li><a href="#">Quem somos</a></li>
-            </ul>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Acervo/index.html">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                </div>
+        </div>
         </nav>
 
     </header>
@@ -60,62 +66,85 @@
         </div>
     </div>
 
-        <h1 class=subtitulo-esquerda>dançart</h1>
-        <div class=bloco>
-                <div class=imagem style=background-image:url() >
-                </div>
-                <div class="texto1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+        <h1 class="subtitulo esquerda">dançart</h1>
+        <div class=bloco style="background-color: #CE7D7D;">
+            <img class = imagem src = "Imagens/dancart.png">
+                <div class="texto">
+                    <p class = "direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
                         volutpat.
                         Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
                 </div>
         </div>
-        <h1 class=subtitulo2>rabiscando</h1>
-        <div class=bloco2>
-                <div class=imagem2>
-                    <img class cover src="Imagens/rabiscando.jpg" alt " rabiscando " width="600" height="350">
-                </div>
-                <div class="texto2">
-                    <p class=conteudo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
-                        volutpat.
-                        Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
-                </div>
+        <h1 class="subtitulo direita">rabiscando</h1>
+        <div class=bloco style = "background-color: #F8EB7E;">
+            <div class="texto">
+                <p class = "esquerda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+                    volutpat.
+                    Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+            </div>
+
+                    <img class = imagem src="Imagens/rabiscando.jpg">
+
         </div>
-        <h1 class=subtitulo3>poesiando</h1>
-        <div class=bloco3>
-                <div class=imagem3>
-                    <img class cover src="Imagens/poesiando.jpg" alt " poesiando " width="600" height="350">
-                </div>
-                <div class="texto3">
-                    <p class=conteudo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+        <h1 class="subtitulo esquerda">poesiando</h1>
+        <div class=bloco style = "background-color: #97D382;">
+
+                    <img class = imagem src="Imagens/poesiando.jpg">
+
+                <div class="texto">
+                    <p class="direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
                         volutpat.
                         Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
                 </div>
         </div>
     </div>
-    <div style = "font-size: 80px;">
-        <i class="fab fa-instagram"></i>
-    </div>
-
-    <!--
-    <footer class="footer" >
-        <div class = "redes-sociais">
-            <ul>
-                <li><a href = ""> <img src = "./Imagens/instagram.png"></a></li>
-                <li><a href = ""></a> <img src = "./Imagens/youtube.png"></li>
-                <li><a href = ""></a> <img src = "./Imagens/twitter.png"></li>
-            </ul>
+    
+    <footer >
+        <div class = container>
+            <div>
+                <img class ="logoCaleidoscopio" src="../Imagens/logoCaleidoscopioCompleto.png">
+            </div>
+            <div>
+                <img class = "logoNac" src="../Imagens/logoNac.png">
+                
+            </div>
+            
+            <hr width="2" size="250" color="black">
+            <div class = links>
+                <ul>
+                    <li><a href = "../SobreNós/index.html">Sobre Nós</a></li>
+                    <li><a href = "../Contato/index.html">Contato</a></li>
+                    <li><a href = "">FAQ</a></li>
+                    <li><a href = "">Termos</a></li>
+                </ul>
+            </div>
+            <div class = "quadro">
+                <div class = "quote">
+                    <q>Temos a arte para não morrer da verdade.</q>
+                </div>
+                <p>-Friedrich Nietzsche</p>
+            </div>
+            <div class = social-area>
+                <ul class = "redes-sociais">
+                    <li><a href = "https://www.instagram.com/caleidoscopio_ifpr/" target="_blank"><i class="fab fa-instagram" style="font-size: 1.5em;"></i></a></li>
+                    <li><a href = "https://www.youtube.com/channel/UCs-VtrzZ-b91gw64TBDxNPg" target="_blank"><i class="fab fa-youtube" style="font-size: 1.5em;" ></i></a></li>
+                    <li><a href = "https://www.tiktok.com/@caleidoscopio_ifpr" target="_blank"><i class="fab fa-tiktok" style="font-size: 1.5em;"></i></a></li>
+                </ul>
+            </div>
         </div>
-
     </footer>
-    -->
+    <div class = copyright>
+        <p>Todos os direitos reservados - Caleidoscópio © 2022</p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
 </body>
