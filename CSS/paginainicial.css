@@ -295,11 +295,134 @@ body::-webkit-scrollbar {
 
 
 
-.rodape {
-    width: 100%;
-    height: 200px;
-    margin-top: 400px;
+/*FOOTER*/
+footer{
+  background-image: url(../PaginaInicial/Imagens/rodapeCaleidoscopioVazio.png);
+  background-position: 0% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50px 50px;
+  width: 100%;
+  height: auto;
+  padding-top:350px;
+}
+footer .container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 0 auto;
+  
+}
+.container .social-area{
+  display: grid;
+  grid-column: 1/3;
+  display: block;
+  align-items: center;
+}
+.redes-sociais {
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 50px);
+  justify-content: center;
+}
+.redes-sociais li{
+  list-style:none;
+}
+.redes-sociais li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.redes-sociais li a .fab{
+  color: #000000;
+}
+.redes-sociais li a .fab:hover{
+  color: #000000;
+  opacity: 0.6;
+}
+.logoCaleidoscopio{
+  object-fit: cover;
+  width: 180px;
+  height: 180px;
+  margin-top: 40px;
+}
+.logoNac{
+  object-fit: cover;
+  width: 180px;
+  height: 180px;
+  margin-top: 40px;
+}
+footer hr{
+  margin: 0 auto;
+}
+.links {
+  display: grid;
+  align-content: center;
+  
+}
+footer .links ul{
+  align-content: center;
+  align-items: center;
+}
+footer .links ul li{
+  list-style: none;
+}
+footer .links ul li a{
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 10px;
+  display: inline-block;
 
-    background-color: wheat;
+}
+footer .links ul li a:hover{
+  opacity: 0.5;
+}
+.quadro {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+.quadro .quote{
+  position: absolute;
+  grid-column: 1/4;
+  grid-row: 2;
+
+}
+.quadro .quote q{
+  font-weight: bold;
+  font-size: 1.25em;
+  
+}
+.quadro p{
+  font-size: 1em;
+  grid-column: 2/4;
+  grid-row: 3 ;
+  text-align: right;
+
+}
+.copyright{
+  width: 100%;
+  background: #fcefa2;
+  padding: 8px 100px;
+  text-align: center;
+  color: #000000;
+
+}
+@media (max-width: 800px){
+  footer .container {grid-template-columns: 1fr 1fr; width: 90%;}
+  footer hr {display: none;}
+  .quadro {display:none}
+  footer .links {grid-column: 1/3;}
+  footer .links ul { text-align: center;grid-template-columns: repeat(4, 90px); display: grid; align-content: center; justify-content: center; text-decoration: none;}
 }
 
