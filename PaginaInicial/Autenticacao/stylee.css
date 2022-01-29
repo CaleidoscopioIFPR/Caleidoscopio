@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#formLogin{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding: 15px;
+    
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    width: 300px;
+    height: 250px;
+}
+#formCadastro{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    padding: 15px;
+    
+    
+    display: none;
+    margin: 0 auto;
+    
+
+    width: 300px;
+    height: 300px;
+}
+#emailLogin, #senhaLogin{
+    border: 2px black solid;
+    border-radius: 10px;
+    display: block;
+
+    position: relative;
+    margin: 0 auto;
+    padding: 1px;
+
+    width: 290px;
+    height: 30px;
+    
+}
+#nomeCadastro,#sobrenomeCadastro,#emailCadastro,#senhaCadastro{
+    border: 2px black solid;
+    border-radius: 10px;
+    display: block;
+
+    position: relative;
+    margin: 0 auto;
+    padding: 1px;
+
+    width: 290px;
+    height: 30px;
+}
+#btnEntrar{
+    
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+    left: 30px;
+    
+    height: 30px;
+    width: 250px;
+}
+#btnCadastro{
+
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+    left: 30px;
+    
+    height: 30px;
+    width: 250px;
+}
+#btnCadastrar{
+    text-align: center;
+    
+
+    margin-top: 10px;
+    color: white;
+
+    font-size: 15px;
+    padding: 12px;
+
+    border: white 1px solid;
+    background-color: rgb(61, 123, 255);
+}
+
+#btnCadastrar:active{
+    transform: translate(0px, -1px);
+    transition: transform 0.1s;
+}
+#btnLogin{
+    text-align: center;
+    
+
+    margin-top: 10px;
+    color: white;
+
+    font-size: 15px;
+    padding: 12px;
+
+    border: white 1px solid;
+    background-color: rgb(61, 123, 255);
+}
+#btnLogim:active{
+    transform: translate(0px, -1px);
+    transition: transform 0.1s;
+}
+.title{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+label{
+    position: relative;
+}
+#mensagem{
+    display: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    margin: 0 auto;
+    
+    margin-top: 10px;
+
+    width: 250px;
+    
+    padding: 20px;
+
+    color: white;
+    background-color: red;
+}
+#MsgCadastro{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: static;
+}
+#MsgLogin{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}

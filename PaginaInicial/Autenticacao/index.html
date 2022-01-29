@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylee.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <!-- LOGIN USUÁRIO -->
+    <form id="formLogin">
+
+        <span class="title">
+            Login
+        </span>
+
+        <div id="linha">
+            <label for="emailLogin">E-mail</label>
+            <input type="text" name="email" id="emailLogin" placeholder="Digite seu e-mail">
+        </div>
+        <div id="linha" class="senha">
+            <label for="senhaLogin">Senha</label>
+            <input type="password" name="senha" id="senhaLogin" placeholder="Digite sua senha">
+        </div>
+        <div id="mensagem"></div>
+
+
+        <button id="btnEntrar">Entrar</button>
+        <a href="javascript:void(0)" id="esquecisenha">Esqueci minha senha</a>
+        <br>
+        <br>
+
+
+    </form>
+    <div id="MsgCadastro">Ainda não tem conta ?</br> <button id="btnCadastrar">Cadastre-se !</button></div>
+    <!-- CADASTRO USUÁRIO -->
+    <br>
+    <br>
+    <br>
+    <form id="formCadastro">
+        <div id="mensagem"></div>
+        <div class="title">
+            <h1>Cadastrar-se</h1>
+        </div>
+        <div id="linha">
+            <label for="nomeCadastro">Nome</label>
+            <input type="text" name="emailCadastro" id="nomeCadastro" placeholder="Digite seu nome">
+        </div>
+        <div id="linha">
+            <label for="sobrenomeCadastro">Sobrenome</label>
+            <input type="text" name="email" id="sobrenomeCadastro" placeholder="Digite seu sobrenome">
+        </div>
+        <div id="linha">
+            <label for="emailCadastro">E-mail</label>
+            <input type="text" name="email" id="emailCadastro" placeholder="Digite seu e-mail">
+        </div>
+        <div id="linha">
+            <label for="senhaCadastro">Senha</label>
+            <input type="password" name="senha" id="senhaCadastro" placeholder="Digite sua senha">
+        </div>
+        <div id="linha">
+            <label for="confirmarSenhaCadastro">Confirme sua Senha</label>
+            <input type="password" name="confirmarSenha" id="confirmarSenhaCadastro" placeholder="Confirme sua senha">
+        </div>
+
+
+
+        <button id="btnCadastro">Cadastrar-se</button>
+        <br>
+        <br>
+
+    </form>
+    <div id="MsgLogin">Já tem uma conta ?</br><button id="btnLogin">Faça login</button> </div>
+
+
+
+
+
+    <script src="script/jquery.js" type="text/javascript"></script>
+    <script src="acesso.js" type="text/javascript"></script>
+</body>
+
+</html>
