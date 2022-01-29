@@ -10,27 +10,31 @@
     <meta name="robots" content="dofollow" />
     <meta http-equiv="author" content="Brenda Alves, Gabriel Brasil e Gabriel Soler" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" type="text/css" href="../../../CSS/cadastro.css">
-    <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/thabitregular/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/Unna/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/Fonts/thabitregular/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/Fonts/Unna/stylesheet.css">
     <script src="https://kit.fontawesome.com/70fa70d7b9.js" crossorigin="anonymous"></script>
 </head>
 <header>
     <div class="LogoCaleidoscopio">
-        <a href="../../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Imagens/logoCaleidoscopio.png"
+        <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png"
                 width="85" heigh="85" alt="logo"> </a>
     </div>
     <button class = "btn-menu"><i class="fas fa-bars"></i></button>
     <nav class = "menu">
         <a class = "btn-close"><i class="fas fa-times"></i></a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Acervo</a></li>
-            <li><a href="#">Arte e suas manifestações</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="../../Login/Cadastro/index.html">Perfil</a></li>
-        </ul>
+        <div class = "container">
+            <div class = "left">
+            </div>
+            <div class = "right">
+                <a class="itens" href="../../index.html">Home</a>
+                <a class="itens" href="../Projetos/index.html">Projetos</a>
+                <a class="itens" href="../Acervo/index.html">Acervo</a>
+                <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                <a class="itens" href="../Cadastro/index.html">Perfil</a>
+            </div>
+    </div>
     </nav>
 
 </header>
@@ -59,14 +63,16 @@
         </form>
     </div>
  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(".btn-menu").click(function(){
-            $(".menu").show();
-        });
-        $(".btn-close").click(function(){
-            $(".menu").hide();
-        })
-    </script>
-    <script src= "../../../js/senha.js"></script>
+ <script>
+    $(".btn-menu").click(function(){
+        $(".menu").show();
+        $("footer").hide();
+    });
+    $(".btn-close").click(function(){
+        $(".menu").hide();
+        $("footer").show();
+    })
+</script>
+    <script src= "../../js/senha.js"></script>
 </body>
 </html>

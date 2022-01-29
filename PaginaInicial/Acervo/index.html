@@ -21,21 +21,35 @@
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
-
-        <div style="text-align: center">
-            <h1 class="titulos"> ACERVO </h1>
-            <p class="legenda"><q>A verdadeira viagem se faz na memória.</q></p>
+        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Acervo/index.html">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                </div>
         </div>
-
-        <div id="motherButtons">       
-            <div id="botoes">
-                <a href="adicionarImagem.html">
-                <button class="botao botaoAdicionar">+ Adicionar</button>
-                </a>
-            </div>
-           </div>
-   
+        </nav>   
     </header>
+    <div style="text-align: center; margin-top: 200px;">
+        <h1 class="titulos"> ACERVO </h1>
+        <p class="legenda"><q>A verdadeira viagem se faz na memória.</q></p>
+    </div>
+
+    <div id="motherButtons">       
+        <div id="botoes">
+            <a href="adicionarImagem.html">
+            <button class="botao botaoAdicionar">+ Adicionar</button>
+            </a>
+        </div>
+       </div>
     
 
     <div id="fundo">
@@ -182,7 +196,53 @@
         <div id="Menu">
         </div>
 
-        <footer class=rodape></footer>
+        <footer >
+            <div class = container>
+                <div style="background-image: url(../Imagens/logoCaleidoscopioCompleto.png); background-size:180px 180px; width: 180px; height: 180px; margin-top: 40px;">
+                </div>
+                <div>
+                    <img class = "logoNac" src="../Imagens/logoNac.png">
+                    
+                </div>
+                
+                <hr width="2" size="250" color="black">
+                <div class = links>
+                    <ul>
+                        <li><a href = "../SobreNós/index.html">Sobre Nós</a></li>
+                        <li><a href = "../Contato/index.html">Contato</a></li>
+                        <li><a href = "">FAQ</a></li>
+                        <li><a href = "">Termos</a></li>
+                    </ul>
+                </div>
+                <div class = "quadro">
+                    <div class = "quote">
+                        <q>Temos a arte para não morrer da verdade.</q>
+                    </div>
+                    <p>-Friedrich Nietzsche</p>
+                </div>
+                <div class = social-area>
+                    <ul class = "redes-sociais">
+                        <li><a href = "https://www.instagram.com/caleidoscopio_ifpr/" target="_blank"><i class="fab fa-instagram" style="font-size: 1.5em;"></i></a></li>
+                        <li><a href = "https://www.youtube.com/channel/UCs-VtrzZ-b91gw64TBDxNPg" target="_blank"><i class="fab fa-youtube" style="font-size: 1.5em;" ></i></a></li>
+                        <li><a href = "https://www.tiktok.com/@caleidoscopio_ifpr" target="_blank"><i class="fab fa-tiktok" style="font-size: 1.5em;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class = copyright>
+            <p>Todos os direitos reservados - Caleidoscópio © 2022</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            $(".btn-menu").click(function(){
+                $(".menu").show();
+                $("footer").hide();
+            });
+            $(".btn-close").click(function(){
+                $(".menu").hide();
+                $("footer").show();
+            })
+        </script>  
         <script src="../../js/hoverImgCollection.js"></script>
 </body>
 
