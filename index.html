@@ -18,18 +18,35 @@
 <body style="height: 100% ; width: 100% ;">
 
     <header>
-        <div id="titulo">
-            <h1> CALEIDOSCÓPI </h1>
-            <img class="logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-                width="90" height="90">
+        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    
+                        <a class="itens" href="index.html">Home</a>
+                        <a class="itens" href="PaginaInicial/Projetos/index.html">Projetos</a>
+                        <a class="itens"href="PaginaInicial/Acervo/index.html">Acervo</a>
+                        <a class="itens"href="PaginaInicial/Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                        <a class="itens"href="PaginaInicial/SobreNós/index.html">Sobre Nós</a>
+                        <a class="itens"href="PaginaInicial/Cadastro/index.html">Perfil</a>
+                </div>
         </div>
-
-        <div class="legenda">
-            <p style="text-align: left;">ca.lei.dos.co.pi.o<br>
-                1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas<br>
-                2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
-        </div>
+        </nav>
     </header>
+    <div id="titulo" style="margin-top:30px;">
+        <h1> CALEIDOSCÓPI </h1>
+        <img class="logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopio.png" alt="logoTitulo"
+            width="90" height="90">
+    </div>
+
+    <div class="legenda">
+        <p style="text-align: left;">ca.lei.dos.co.pi.o<br>
+            1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas<br>
+            2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
+    </div>
 
 
     <div id="animacao">
@@ -191,9 +208,11 @@
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
     <script src="js/slideShow.js"></script>

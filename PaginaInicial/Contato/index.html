@@ -31,13 +31,29 @@
         <div class="cabeçalho">
             <div class="LogoCaleidoscopio">
                 <a href="../../index.html"><input type="image" name="botaoCaleidoscopio"
-                        src="Imagens/logoCaleidoscopio.png" width="85" heigh="85" alt="logo"> </a>
+                    src="Imagens/logoCaleidoscopio.png" width="85" heigh="85" alt="logo"> </a>
+                </div>
             </div>
-            <div id=titulo>
-                <h1 class="titulo"> <strong>contato</strong></h1>
+            <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+            <nav class = "menu">
+                <a class = "btn-close"><i class="fas fa-times"></i></a>
+                <div class = "container">
+                    <div class = "left">
+                    </div>
+                    <div class = "right">
+                        <a class="itens" href="../../index.html">Home</a>
+                        <a class="itens" href="../Projetos/index.html">Projetos</a>
+                        <a class="itens" href="../Acervo/index.html">Acervo</a>
+                        <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                        <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                        <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                    </div>
             </div>
-        </div>
+            </nav>
     </header>
+    <div id=titulo style = "margin-top: 200px;">
+        <h1 class="titulo"> <strong>contato</strong></h1>
+    </div>
     <div class="conteudo">
         <div id=feedback>
             <h2 class="texto1"> Algum problema? Feedback? Mande um email para nós! </h2>
@@ -90,9 +106,11 @@
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
 

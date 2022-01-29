@@ -21,12 +21,28 @@
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
-        <div id="icone">
-            <i class="fas fa-plus addIcon"></i>
-            <i class="fas fa-image pictureIcon"></i>
+        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Acervo/index.html">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                </div>
         </div>
+        </nav>
     </header>
-
+    
+    <div id="icone">
+        <i class="fas fa-plus addIcon"></i>
+        <i class="fas fa-image pictureIcon"></i>
+    </div>
     <form id="formulario">
 
         <fieldset class="fieldsetForm1">
@@ -102,9 +118,11 @@
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
     <script src="../../js/botaoUpload.js"></script>

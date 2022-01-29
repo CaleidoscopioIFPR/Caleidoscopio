@@ -21,21 +21,35 @@
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
-
-        <div style="text-align: center">
-            <h1 class="titulos"> ACERVO </h1>
-            <p class="legenda"><q>A verdadeira viagem se faz na memória.</q></p>
+        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Acervo/index.html">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                </div>
         </div>
-
-        <div id="motherButtons">       
-            <div id="botoes">
-                <a href="adicionarImagem.html">
-                <button class="botao botaoAdicionar">+ Adicionar</button>
-                </a>
-            </div>
-           </div>
-   
+        </nav>   
     </header>
+    <div style="text-align: center; margin-top: 200px;">
+        <h1 class="titulos"> ACERVO </h1>
+        <p class="legenda"><q>A verdadeira viagem se faz na memória.</q></p>
+    </div>
+
+    <div id="motherButtons">       
+        <div id="botoes">
+            <a href="adicionarImagem.html">
+            <button class="botao botaoAdicionar">+ Adicionar</button>
+            </a>
+        </div>
+       </div>
     
 
     <div id="fundo">
@@ -222,11 +236,13 @@
         <script>
             $(".btn-menu").click(function(){
                 $(".menu").show();
+                $("footer").hide();
             });
             $(".btn-close").click(function(){
                 $(".menu").hide();
+                $("footer").show();
             })
-        </script>   
+        </script>  
         <script src="../../js/hoverImgCollection.js"></script>
 </body>
 

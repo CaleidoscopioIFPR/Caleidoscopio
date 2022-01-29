@@ -30,19 +30,23 @@
     <header>
         <div class="LogoCaleidoscopio">
             <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
-                    width="85" heigh="85" alt="logo"> </a>
+                    width="85" alt="logo"> </a>
         </div>
         <button class = "btn-menu"><i class="fas fa-bars"></i></button>
         <nav class = "menu">
             <a class = "btn-close"><i class="fas fa-times"></i></a>
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="index.html">Projetos</a></li>
-                <li><a href="../Acervo/index.html">Acervo</a></li>
-                <li><a href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a></li>
-                <li><a href="../SobreNós/index.html">Sobre Nós</a></li>
-                <li><a href="../Cadastro/index.html">Perfil</a></li>
-            </ul>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Acervo/index.html">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                </div>
+        </div>
         </nav>
 
     </header>
@@ -136,9 +140,11 @@
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
 </body>
