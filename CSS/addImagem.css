@@ -64,11 +64,10 @@ header {
 .menu .container{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100%;
     width: 100%;
 }
 .right{
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-rows: repeat(6, 80px);
     text-align: left;
