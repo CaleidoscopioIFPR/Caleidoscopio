@@ -1,5 +1,5 @@
-const passwordInput = document.getElementById("password")
-const eyeSVG = document.getElementsById("eyeSVG")
+const passwordInput = document.getElementById("senhaCadastro")
+const eyeSVG = document.getElementById("eyeSVG")
 
 function eyeClick(){
     let inputTypeIsPassword = passwordInput.type == "password"
@@ -13,10 +13,10 @@ function eyeClick(){
 
 function showPassword(){
     passwordInput.setAttribute("type", "text")
-    eyeSVG.setAttribute("src", "eye-regular.svg")
+    eyeSVG.setAttribute("src", "Imagens/eye-regular.svg")
 
 }
 function hidePassword(){
     passwordInput.setAttribute("type", "password")
-    eyeSVG.setAttribute("src", "eye-slash-regular.svg")
+    eyeSVG.setAttribute("src", "Imagens/eye-slash-regular.svg")
 }

@@ -10,7 +10,7 @@ $(function () {
                 $("div#mensagem").html("Preencha o seu email");
             } else {
                 $.ajax({
-                    url: "../acess/acesso.php",
+                    url: "acess/acesso.php",
                     type: "POST",
                     data: {
                         type: "Esqueci",
@@ -44,7 +44,7 @@ $(function () {
 
             } else {
                 $.ajax({
-                    url: "../acess/acesso.php",
+                    url: "acess/acesso.php",
                     type: "POST",
                     data: {
                         type: "Login",
@@ -60,6 +60,7 @@ $(function () {
                             $("div#mensagem").show();
                             $("div#mensagem").html(retorno["mensagem"]);
                         } else if (retorno["erro"] == 2) {
+                            $("div#mensagem").show();
                             $("div#mensagem").html(retorno["mensagem"]);
                         } else {
                             window.location = "dashboard.php";
@@ -98,7 +99,7 @@ $(function () {
 
         else {
             $.ajax({
-                url: "../acess/acesso.php",
+                url: "acess/acesso.php",
                 type: "POST",
                 data: {
                     type: "Cadastro",
@@ -119,6 +120,7 @@ $(function () {
                     else if (retorno["erro"] == 2) {
                         $("div#mensagem").show();
                         $("div#mensagem").html("Enviamos um e-mail de confirmação para " + campoEmail + "");
+                        $("form#formCadastro").hide();
                     }
 
                 },
@@ -132,20 +134,24 @@ $(function () {
 
     $("a#esquecisenha").on("click", function () {
         $("form#formLogin").addClass("esqueci");
-        $("form#formLogin span.title").html("Digite o seu e-mail para recuperar sua conta :D");
+        $("form#formLogin span.titleLogin").html("Digite o seu e-mail para recuperar sua conta :D");
         $("form#formLogin button#btnEntrar").html("Enviar");
 
+        $("div#MsgCadastro").hide();
         $("form#formLogin div#linha.senha").hide();
         $(this).hide();
+
+        $("div#mensagem").hide();
     });
 
-    $("button#btnCadastrar").on("click", function () {
+    $("div#MsgCadastro button#btnCadastrar").on("click", function () {
         $("form#formLogin").hide();
         $("form#formCadastro").show();
 
         $("div#MsgCadastro").hide();
         $("div#MsgLogin").show();
 
+        $("div#mensagem").hide();
     });
     $("button#btnLogin").on("click", function () {
         $("form#formLogin").show();
@@ -154,6 +160,7 @@ $(function () {
         $("div#MsgCadastro").show();
         $("div#MsgLogin").hide();
 
+        $("div#mensagem").hide();
     });
 
 });

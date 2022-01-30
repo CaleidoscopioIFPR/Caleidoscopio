@@ -1,3 +1,40 @@
+<?php
+
+$mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+            $msg = false;
+            $titulo = isset($_POST['titulo'])?$_POST['titulo']:"";
+            $autor = isset($_POST['autor'])?$_POST['autor']:"";
+            $descricao = isset($_POST['descricao'])?$_POST['descricao']:"";
+            $categoria =  isset($_POST['meios'])?$_POST['meios']:"";
+            $imagem = isset($_FILES['arquivoImagem'])?$_FILES['arquivoImagem']:"";
+            // echo "$titulo, $autor, $descricao, $categoria, $novo_nome" ;
+            
+    if(isset($_FILES['arquivoImagem'])){
+    
+
+        $extensao = strtolower(substr($_FILES['arquivoImagem']['name'], -4));
+        $novo_nome = md5(time()). $extensao;
+        $diretorio = "Imagens/Upload/";
+
+
+        move_uploaded_file($_FILES['arquivoImagem']['tmp_name'], $diretorio.$novo_nome);
+
+        $sql_code = "INSERT INTO acervo (arquivo, id, dataEnvio, titulo, autor, categoria, descricao) VALUES ('$novo_nome', NULL, NOW(), '$titulo', '$autor', '$categoria', '$descricao')";
+
+        if($mysqli->query($sql_code)){
+            $msg = "Dados enviados com sucesso !!";
+            session_start();
+            $_SESSION['acervo'] = $msg;
+            header('Location: ../Administrador/index.php');
+           
+        }else{
+            $msg = "Falha ao enviar dados da obra, tente novamente mais tarde.";
+        }
+    }
+        
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -44,7 +81,7 @@
         <i class="fas fa-plus addIcon"></i>
         <i class="fas fa-image pictureIcon"></i>
     </div>
-    <form id="formulario">
+    <form action="adicionarImagem.php" method="POST" enctype="multipart/form-data" id="formulario">
 
         <fieldset class="fieldsetForm1">
             <legend class="legenda"> Dê um título à sua obra</legend>
@@ -67,7 +104,9 @@
             <div class="botaoUpload">
                 <input type="file" name="arquivoImagem" id="uploadBtn" value="Escolha o arquivo" hidden />
                 <label for="uploadBtn">Escolha o arquivo</label>
-                <span id="file-chosen">Nenhum arquivo escolhido</span>
+                <span id="file-chosen">
+
+                </span>
             </div>
 
             <div class="botaoSelect">
@@ -120,7 +159,7 @@
             </div>
         </div>
     </footer>
-    <div class = copyright>
+    <div class = "copyright">
         <p>Todos os direitos reservados - Caleidoscópio © 2022</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

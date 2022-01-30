@@ -11,7 +11,18 @@ body{
     margin:0;
     background-color: #fbfbf8;
 }
-.titulo {
+
+label {
+    display: flex;
+    justify-content: left;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-weight: 520;
+    font-size: 1.5em;
+    color: black;
+}
+
+.title {
     color : black;
     text-align: center;
     font-family: 'unnaregular';
@@ -20,12 +31,34 @@ body{
     font-size: 6.25em;
     line-height: 80px;
     color: black;
-    margin-top: 125px;
-  }
+}
+
+.titleLogin {
+    color : black;
+    text-align: center;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.25em;
+    line-height: 80px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+
 .wrapper{
     width: 800px;
-    margin: 5% auto;
+    margin: 0 auto;
+}
 
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1.9em;
+    justify-content: center;
+    margin-top: 100px;
 }
 #formCadastro {
     display: none;
@@ -34,7 +67,10 @@ body{
     align-items: center;
     padding: 1.9em;
     justify-content: center;
+    
 }
+
+
 .area-cadastro{
     flex: 1;
 }
@@ -46,19 +82,31 @@ body{
     font-weight: 520;
     font-size: 1.5em;
     color : black;
-
 }
-.area-cadastro input{
+#formLogin input{
     display: flex;
     padding:5px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    height: 30px;
+    width: 400px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#formCadastro input{
+    display: flex;
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
     height: 30px;
     width: 100%;
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+
 form button{
     border: 0;
     padding: 16px 32px;
@@ -71,12 +119,92 @@ form button{
     cursor: pointer;
     border: 2px solid rgb(73, 73, 73);
     justify-content: center;
-
 }
+
+#flexVertical {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#flexVertical p {
+    margin-top: 15px;
+}
+
 form button:hover{
     background-color: black;
     color: white;
 }
+#btnCadastrar {
+    border: 0;
+    padding: 8px 32px;
+    border-radius: 15px;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid rgb(73, 73, 73);
+    justify-content: center;
+}
+
+#btnLogin:hover {
+    background-color: black;
+    color: white;
+}
+
+#btnCadastrar:hover{
+    background-color: black;
+    color: white;
+}
+
+#MsgCadastro {
+    display: flex;
+    justify-content: center;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 1.5em;
+    color: black;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+#MsgCadastro p{
+    margin-right: 20px;
+}
+
+
+#MsgLogin {
+    display: flex;
+    justify-content: center;
+    font-family: 'unnaregular';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 1.5em;
+    color: black;
+    margin-top: 100px;
+}
+
+#MsgLogin button {
+    border: 0;
+    padding: 16px 32px;
+    border-radius: 15px;
+    font-size: .75em;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid rgb(73, 73, 73);
+    justify-content: center;
+    margin-left: 25px;
+}
+
 .senha-olho{
     width: 100%;
     display: flex;
@@ -122,6 +250,9 @@ form button:hover{
     background-color: #ffffff;
     
 }
+
+
+
 .menu {
     display: none;
     height: 100%;
@@ -176,7 +307,6 @@ form button:hover{
 
     margin: 0 auto;
     
-    margin-top: 10px;
 
     width: 250px;
     
@@ -185,3 +315,6 @@ form button:hover{
     color: white;
     background-color: red;
 }
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }

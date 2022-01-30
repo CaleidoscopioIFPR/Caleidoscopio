@@ -1,3 +1,9 @@
+<?php 
+
+    session_start();
+    $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -118,7 +124,8 @@
                     </div>
                 </div>
 
-            </div>            
+            </div>      
+            
 
             <div class="recent-grid">
                 <div class="projects">
@@ -129,82 +136,44 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <div class="tableTop">
-                                    <p>Nome do Aluno</p> 
+                                    <p>Nome do Autor</p> 
                                     <p>Projeto Pertencente</p> 
                                     <p>Data</p>
                                     <p></p>
                                     <p></p>                                    
                                 </div>
-                                <div class="linha">
-                                    <p>Roberto Carlos</p>
-                                    <p>Dançart</p>
-                                    <p>21/4</p>
-                                    <button class="collapsible"><i class="fas fa-arrow-down" id="iconeSeta"></i></button>
-                                    <div class="content">
-                                        <img src="../Autenticacao/Imagens/professora.png" alt="" height="300px" width="300px">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <div>
-                                            <button class="noBt"><span class="fas fa-times-circle"></span></button>
-                                            <button class="yesBt"><span class="fas fa-check-circle"></span></button>
+                                <?php 
+
+                                    $sql = "SELECT * FROM acervo";
+                                    $consulta = mysqli_query($mysqli,$sql);
+
+                                    while($dados = mysqli_fetch_array($consulta)){
+                                        $imagem = $dados[0];
+                                        $id = $dados[1];
+                                        $dataEnvio = $dados[2];
+                                        $title = $dados[3];
+                                        $aut = $dados[4];
+                                        $desc = $dados[5];
+                                        $cat = $dados[6];
+                                        echo"<div class='linha'>
+                                        <p>$aut</p>
+                                        <p>$cat</p>
+                                        <p>$dataEnvio</p>
+                                        <button class='collapsible'><i class='fas fa-arrow-down' id='iconeSeta'></i></button>
+                                        <div class='content'>
+                                            <img src='../../PaginaInicial/Acervo/Imagens/Upload/$imagem' alt='' height='300px' width='300px'>
+                                            <p>Título: $title</p>
+                                            <p>Descrição: $desc</p>
+                                            <div>
+                                                <button class='noBt'><span class='fas fa-times-circle'></span></button>
+                                                <button class='yesBt'><span class='fas fa-check-circle'></span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="linha">
-                                    <p>Frank Sinatra</p>
-                                    <p>Poesiando</p>
-                                    <p>19/4</p>
-                                    <button class="collapsible"><i class="fas fa-arrow-down" id="iconeSeta"></i></button>
-                                    <div class="content">
-                                        <img src="Imagens/professora.png" alt="" height="300px" width="300px">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <div>
-                                            <button class="noBt"><span class="fas fa-times-circle"></span></button>
-                                            <button class="yesBt"><span class="fas fa-check-circle"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linha">
-                                    <p>Stevie Wonder</p>
-                                    <p>Rabiscando</p>
-                                    <p>13/4</p>
-                                    <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        <img src="Imagens/serriceti.jpg" alt="" height="300px" width="300px">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <div>
-                                            <button class="noBt"><span class="fas fa-times-circle"></span></button>
-                                            <button class="yesBt"><span class="fas fa-check-circle"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linha">
-                                    <p>Michael Jackson</p>
-                                    <p>Dançart</p>
-                                    <p>07/4</p>
-                                    <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        <img src="Imagens/serriceti.jpg" alt="" height="300px" width="300px">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <div>
-                                            <button class="noBt"><span class="fas fa-times-circle"></span></button>
-                                            <button class="yesBt"><span class="fas fa-check-circle"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="linha">
-                                    <p>Barry White</p>
-                                    <p>Poesiando</p>
-                                    <p>29/3</p>
-                                    <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        <img src="Imagens/serriceti.jpg" alt="" height="300px" width="300px">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                        <div>
-                                            <button class="noBt"><span class="fas fa-times-circle"></span></button>
-                                            <button class="yesBt"><span class="fas fa-check-circle"></span></button>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </div>";
+                                    }
+                                ?>
+                                
+                                
                                 <!-- <table width="100%">
                                     <thead>
                                         <tr>
