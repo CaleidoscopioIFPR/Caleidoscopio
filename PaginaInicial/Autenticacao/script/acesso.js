@@ -10,7 +10,7 @@ $(function () {
                 $("div#mensagem").html("Preencha o seu email");
             } else {
                 $.ajax({
-                    url: "acess/acesso.php",
+                    url: "../acess/acesso.php",
                     type: "POST",
                     data: {
                         type: "Esqueci",
@@ -44,7 +44,7 @@ $(function () {
 
             } else {
                 $.ajax({
-                    url: "acess/acesso.php",
+                    url: "../acess/acesso.php",
                     type: "POST",
                     data: {
                         type: "Login",
@@ -98,7 +98,7 @@ $(function () {
 
         else {
             $.ajax({
-                url: "acess/acesso.php",
+                url: "../acess/acesso.php",
                 type: "POST",
                 data: {
                     type: "Cadastro",
