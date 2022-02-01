@@ -63,7 +63,7 @@ $(function () {
                             $("div#mensagem").show();
                             $("div#mensagem").html(retorno["mensagem"]);
                         } else {
-                            window.location = "dashboard.php";
+                            window.location = "../Administrador/index.php";
                         }
 
                     },
@@ -120,6 +120,8 @@ $(function () {
                     else if (retorno["erro"] == 2) {
                         $("div#mensagem").show();
                         $("div#mensagem").html("Enviamos um e-mail de confirmação para " + campoEmail + "");
+
+                        $("div#msgVoltaLogin").show();
                         $("form#formCadastro").hide();
                     }
 
@@ -141,6 +143,7 @@ $(function () {
         $("form#formLogin div#linha.senha").hide();
         $(this).hide();
 
+        $("div#msgVoltaLogin").hide();
         $("div#mensagem").hide();
     });
 
@@ -150,6 +153,8 @@ $(function () {
 
         $("div#MsgCadastro").hide();
         $("div#MsgLogin").show();
+
+        $("div#msgVoltaLogin").hide();
 
         $("div#mensagem").hide();
     });

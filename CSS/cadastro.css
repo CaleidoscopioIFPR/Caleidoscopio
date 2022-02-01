@@ -70,6 +70,12 @@ label {
     
 }
 
+#msgVoltaLogin {
+    display: none;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
 
 .area-cadastro{
     flex: 1;

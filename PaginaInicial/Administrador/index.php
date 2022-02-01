@@ -3,6 +3,20 @@
     session_start();
     $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
 
+    if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        require("../Autenticacao/acess/conexao.php");
+    
+        $conexaoClass = new Conexao();
+        $conexao = $conexaoClass->conectar();
+    
+        $nome = $_SESSION['usuario'][0];
+        $sobrenome = $_SESSION['usuario'][1];
+        $adm = $_SESSION['usuario'][2];
+    } else {
+        echo "<script>window.location = '../Autenticacao/index.html'</script>";
+    }
+    
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,6 +37,10 @@
 
 <body>
 
+<?php
+    if($adm) :
+         
+?>
     <!-- <header>
         <div class="LogoCaleidoscopio">
             <a href="../../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Acervo/Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
@@ -75,6 +93,7 @@
                     <div>
                         <h4>Professora Johnson</h4>
                         <small>Administrador(a)</small>
+                        <a href="../Autenticacao/acess/logout.php"><small><strong>Sair</strong></small></a>
                     </div>
                 </div>
                 
@@ -156,97 +175,34 @@
                                         $desc = $dados[5];
                                         $cat = $dados[6];
                                         echo"<div class='linha'>
+                                        
                                         <p>$aut</p>
                                         <p>$cat</p>
                                         <p>$dataEnvio</p>
                                         <button class='collapsible'><i class='fas fa-arrow-down' id='iconeSeta'></i></button>
                                         <div class='content'>
                                             <img src='../../PaginaInicial/Acervo/Imagens/Upload/$imagem' alt='' height='300px' width='300px'>
+                                            <p>(ID da obra: $id)</p>
                                             <p>Título: $title</p>
                                             <p>Descrição: $desc</p>
                                             <div>
+                                            
                                                 <button class='noBt'><span class='fas fa-times-circle'></span></button>
-                                                <button class='yesBt'><span class='fas fa-check-circle'></span></button>
+                                                <button class='yesBt' name='idUsuario'><span class='fas fa-check-circle'></span></button>
+                                            
                                             </div>
                                         </div>
                                     </div>";
+                                    
                                     }
                                 ?>
-                                
-                                
-                                <!-- <table width="100%">
-                                    <thead>
-                                        <tr>
-                                            <td>Nome do Aluno</td>
-                                            <td>Projeto Pertencente</td>
-                                            <td>Data</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Roberto Carlos</td>
-                                            <td>Poesiando</td>
-                                            <td>
-                                                <span class="status purple"></span>
-                                                21/4
-                                            </td>
-                                            <td>
-                                                <button class="collapsible"><span class="fas fa-arrow-down"></span></button>                                                                                             
-                                            </td>                                           
-                                                                              
-                                        </tr>
-                                        <tr>
-                                            <td>Frank Sinatra</td>
-                                            <td>Dançart</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                18/4
-                                            </td>
-                                            <td><button class="collapsible"><span class="fas fa-arrow-down"></span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Stevie Wonder</td>
-                                            <td>Rabiscando</td>
-                                            <td>
-                                                <span class="status orange"></span>
-                                                08/4
-                                            </td>
-                                            <td><button class="collapsible"><span class="fas fa-arrow-down"></span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Michael Jackson</td>
-                                            <td>Dançart</td>
-                                            <td>
-                                                <span class="status purple"></span>
-                                                24/3
-                                            </td>
-                                            <td><button class="collapsible"><span class="fas fa-arrow-down"></span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Barry White</td>
-                                            <td>Poesiando</td>
-                                            <td>
-                                                <span class="status pink"></span>
-                                                17/3
-                                            </td>
-                                            <td><button class="collapsible"><span class="fas fa-arrow-down"></span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Billy Paul</td>
-                                            <td>Rabiscando</td>
-                                            <td>
-                                                <span class="status orange"></span>
-                                                12/3
-                                            </td>
-                                            <td><button class="collapsible"><span class="fas fa-arrow-down"></span></button></td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
                             </div>
                         </div>
 
                     </div>
                 </div>
+
+                              
 
                 <div class="customers">
                     <div class="card">
@@ -259,7 +215,7 @@
                         <div class="card-body">
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/serriceti.jpg" width="40px" height="40px" alt="">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
                                     <div>
                                         <h4>Gabriel Brasil</h4>
                                         <small>CEO Caleidoscopas</small>
@@ -286,7 +242,7 @@
 
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/serriceti.jpg" width="40px" height="40px" alt="">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
                                     <div>
                                         <h4>Brenda Alves</h4>
                                         <small>Diretora Caleidoscopas</small>
@@ -303,7 +259,7 @@
 
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/serriceti.jpg" width="40px" height="40px" alt="">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
                                     <div>
                                         <h4>Gabriel Soler</h4>
                                         <small>Chefe Executivo Caleidoscopas</small>
@@ -320,7 +276,7 @@
 
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/serriceti.jpg" width="40px" height="40px" alt="">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
                                     <div>
                                         <h4>Prof. Lidia</h4>
                                         <small>Fundadora Caleidoscopas</small>
@@ -337,7 +293,7 @@
 
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/serriceti.jpg" width="40px" height="40px" alt="">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
                                     <div>
                                         <h4>Prof. Isis</h4>
                                         <small>Auxiliar Adminsitrativa Caleidoscopas</small>
@@ -351,15 +307,65 @@
                                         Telefone:
                                         (41)9922-9922                                    </div>
                             </div>
-
+                                
+                            
                         </div>
+                        <p>Id da Imagem:</p>
+                        <form action="../Acervo/index.php" method="POST">
+                            <select name="id">
+
+                            <?php
+
+                            $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+                            $sql = "SELECT * FROM acervo";
+                            $consulta = mysqli_query($mysqli,$sql);
+
+                            while($dados = mysqli_fetch_array($consulta)){
+
+                                $imagem = $dados[0];
+                                $id = $dados[1];
+                                $dataEnvio = $dados[2];
+                                $title = $dados[3];
+                                $aut = $dados[4];
+                                $desc = $dados[5];
+                                $cat = $dados[6];
+
+                                echo 
+                                "
+
+                                <option>$id</option>
+
+                                ";
+
+                        }
+
+
+                        ?>
+                            </select>
+                            <button>Enviar Imagem</button>
+                        </form>
                     </div>
                 </div>
             </div>
-
+            <!-- <form action="../Acervo/index.php" method="POST">
+                    <label>Voce tem certeza que deseja excluir essa solicitação?</label>
+                    <button class='yesBt' name="btConfirmar"><span class='fas fa-check-circle'></span></button>
+                    <button class='noBt' name="btExcluir"><span class='fas fa-times-circle'></span></button>
+            </form>      -->
         </main>
     </div>
+    <?php endif;
+    ?>
 
+    <?php if(!$adm) : ?>
+    <script>
+        window.location = "../../index.php"
+    </script>
+    <?php endif; ?>
+
+    <script src="../Autenticacao/script/jquery.js"></script>
+    <script src="adicionarEnvio.js"></script>
+    <script src="excluirEnvio.js"></script>
     <script src="../../js/botaoSeta.js"></script>
 </body>
 </html>

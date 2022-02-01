@@ -56,7 +56,7 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
 
     <header>
         <div class="LogoCaleidoscopio">
-            <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
+            <a href="../../index.php"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
                     width="85" heigh="85" alt="logo"> </a>
         </div>
         <button class = "btn-menu"><i class="fas fa-bars"></i></button>
@@ -66,7 +66,7 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
                 <div class = "left">
                 </div>
                 <div class = "right">
-                    <a class="itens" href="../../index.html">Home</a>
+                    <a class="itens" href="../../index.php">Home</a>
                     <a class="itens" href="../Projetos/index.html">Projetos</a>
                     <a class="itens" href="../Acervo/index.html">Acervo</a>
                     <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>

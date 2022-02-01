@@ -552,3 +552,9 @@ body::-webkit-scrollbar {
 
     background-color: wheat;
 }
+
+form {
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
