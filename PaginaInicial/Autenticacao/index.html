@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../CSS/cadastro.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <!-- LOGIN USUÁRIO -->
+    <form id="formLogin">
+
+        <span class="title">
+            Login
+        </span>
+
+        <div id="linha">
+            <label for="emailLogin">E-mail</label>
+            <input type="text" name="email" id="emailLogin" placeholder="Digite seu e-mail">
+        </div>
+        <div id="linha" class="senha">
+            <label for="senhaLogin">Senha</label>
+            <input type="password" name="senha" id="senhaLogin" placeholder="Digite sua senha">
+        </div>
+        <div id="mensagem"></div>
+
+
+        <button id="btnEntrar">Entrar</button>
+        <a href="javascript:void(0)" id="esquecisenha">Esqueci minha senha</a>
+        <br>
+        <br>
+
+
+    </form>
+    <div id="MsgCadastro">Ainda não tem conta ?</br> <button id="btnCadastrar">Cadastre-se !</button></div>
+    <!-- CADASTRO USUÁRIO -->
+    <br>
+    <br>
+    <br>
+
+    <form id="formCadastro">
+            <h1 class = "titulo">Criar Conta</h1>
+            <div class = "wrapper">
+            <div id="mensagem"></div>
+                <div class = "area-cadastro">
+                    <legend> Digite seu nome</legend>           
+                    <input class="tituloInput" id="nomeCadastro" type="text" name="nome" size="50" required="required">
+
+                    <legend> Digite seu sobrenome</legend>           
+                    <input class="tituloInput" id="sobrenomeCadastro" type="text" name="nome" size="50" required="required">
+
+                    <legend> Digite seu e-mail</legend>           
+                    <input class="input" type="email" id="emailCadastro" name="e-mail" size="50" required="required">
+
+                    <div class = "senha-olho">
+                        <legend> Digite sua senha</legend>
+                        <img id =eyeSVG width="30px" src="eye-regular.svg" onclick="eyeClick()"></img>
+                    </div>
+                    <input class="input" id="senhaCadastro" type="password" name="senha" size="50" required="required">
+
+                    <legend> Confirme sua senha</legend>
+                    <input class="input" type="password" id="confirmarSenhaCadastro" name="confirma-senha" size="50" required="required">
+
+                </div>
+                <button id="btnCadastro" name ="criar-conta">Criar conta</button>
+            
+            <div id="MsgLogin">Já tem uma conta ?</br><button id="btnLogin">Faça login</button> </div>
+        </form>
+    
+
+
+
+
+
+    <script src="script/jquery.js" type="text/javascript"></script>
+    <script src="script/acesso.js" type="text/javascript"></script>
+</body>
+
+</html>

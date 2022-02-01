@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<?php
+
+session_start();
+
+if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+    require("acess/conexao.php");
+
+    $conexaoClass = new Conexao();
+    $conexao = $conexaoClass->conectar();
+
+    $nome = $_SESSION['usuario'][0];
+    $sobrenome = $_SESSION['usuario'][1];
+    $adm = $_SESSION['usuario'][2];
+} else {
+    echo "<script>window.location = 'index.html'</script>";
+}
+
+
+?>
+
+
+<html lang="pt_BR">
+
+<body>
+    <?php if ($adm) : ?>
+
+    <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -141,7 +167,7 @@
                                     <p>21/4</p>
                                     <button class="collapsible"><i class="fas fa-arrow-down" id="iconeSeta"></i></button>
                                     <div class="content">
-                                        <img src="../Autenticacao/Imagens/professora.png" alt="" height="300px" width="300px">
+                                        <img src="Imagens/professora.png" alt="" height="300px" width="300px">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                                         <div>
                                             <button class="noBt"><span class="fas fa-times-circle"></span></button>
@@ -275,7 +301,38 @@
                                 </table> -->
                             </div>
                         </div>
+                        <table width="40%" border="1px">
+        <tr>
+            <td><strong>ID</strong></td>
+            <td><strong>Nome</strong></td>
+            <td><strong>Sobrenome</strong></td>
+            <td><strong>Email</strong></td>
+            <td><strong>Senha</strong></td>
+            <td><strong>ADM</strong></td>
+        </tr>
 
+         <?php
+
+            $query = $conexao->prepare("SELECT * FROM usuario");
+            $query->execute();
+
+            $users = $query->fetchAll(PDO::FETCH_ASSOC);
+
+            for ($i = 0; $i < sizeof($users); $i++) :
+                $usuarioAtual = $users[$i];
+
+            ?>
+        <tr>
+            <td><?php echo $usuarioAtual['id'] ?></td>
+            <td><?php echo $usuarioAtual['nome'] ?></td>
+            <td><?php echo $usuarioAtual['sobrenome'] ?></td>
+            <td><?php echo $usuarioAtual['email'] ?></td>
+            <td><?php echo $usuarioAtual['senha'] ?></td>
+            <td><?php echo $usuarioAtual['adm'] ?></td>
+
+        </tr>
+        <?php endfor; ?> 
+    </table>
                     </div>
                 </div>
 
@@ -393,4 +450,10 @@
 
     <script src="../../js/botaoSeta.js"></script>
 </body>
+</html>
+
+    <?php endif; ?>
+    <a href="acess/logout.php">Sair</a>
+</body>
+
 </html>

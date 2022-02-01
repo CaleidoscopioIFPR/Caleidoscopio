@@ -18,12 +18,14 @@ var icon = document.getElementsByClassName("fas fa-arrow-down");
 var isFalse = false;
 for (let index = 0; index < botao.length; index++) {
   botao[index].addEventListener("click", function(){
-    if (isFalse == false) {
-        icon[index].style.transform = "rotate(180deg)";
-    }
-    else {
-        icon[index].style.transform = "rotate(0deg)";
-    }
+    if (icon[index].style.transform == "") {
+      icon[index].style.transform = "rotate(180deg)";
+  } else if (icon[index].style.transform == "rotate(180deg)") {
+      icon[index].style.transform = "rotate(0deg)";
+  }
+  else if (icon[index].style.transform == "rotate(0deg)") {
+      icon[index].style.transform = "rotate(180deg)";
+  }
     isFalse = !isFalse;
   })
 }
