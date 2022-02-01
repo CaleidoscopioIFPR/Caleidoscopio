@@ -86,7 +86,7 @@
             $dataEnvio = $dados[4];
             $aut = $dados[5];
             $cat = $dados[6];
-            echo"<a class='item' href='PaginaInicial/Acervo/index.html'>
+            echo"<a class='item' href='PaginaInicial/Acervo/index.php'>
                     <img src='PaginaInicial/Acervo/Imagens/Upload/$imagem' />
                 </a>";
         }
