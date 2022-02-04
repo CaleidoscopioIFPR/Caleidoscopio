@@ -45,22 +45,20 @@
         </div>
         </nav>
     </header>
-    <div id="titulo" style="margin-top:30px;">
-        <h1> CALEIDOSCÓPI </h1>
-        <img class="logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-            width="90" height="90">
+    <div class = "titulo-container">
+        <img class = "logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopioCompleto.png">
+        <div class = "legenda">
+            <p style="text-align: left;">ca.lei.dos.co.pi.o</br>
+                1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas</br>
+                2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
+            </div>
     </div>
 
-    <div class="legenda">
-        <p style="text-align: left;">ca.lei.dos.co.pi.o<br>
-            1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas<br>
-            2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
-    </div>
-
+    <!--
     <div id="animacao">
         <img src="PaginaInicial/Imagens/gifTeste2.gif" alt="animamcao" width="400px" height="500px">
     </div>
-
+      -->
     
 
     <div id="acervo">
@@ -169,24 +167,39 @@
     </div>
 
 
-    <div id="blocos">
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-dançart">
-                <h2 class="nomeProj"> dançart</h2>
-            </div>
-        </a>
+    <div id="blocos-container">
+        <div class="bloco dancart">
+            <a href="PaginaInicial/Projetos/index.html">
+                <div>
+                    <img src="PaginaInicial/Imagens/DancartPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj"> dançart</h2>
+                </div>
+            </a>
+        </div>
 
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-rabiscando">
-                <h2 class="nomeProj">rabiscando</h2>
-            </div>
-        </a>
+        <div class="bloco rabiscando">
+            <a href="PaginaInicial/Projetos/index.html">
+                <div>
+                    <img src="PaginaInicial/Imagens/RabiscandoPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj">rabiscando</h2>
+                </div>
+            </a>
+        </div>
 
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-poesiando">
-                <h2 class="nomeProj"> poesiando </h2>
-            </div>
-        </a>
+        <div class="bloco poesiando">
+            <a href="PaginaInicial/Projetos/index.html">
+                <div>
+                    <img src="PaginaInicial/Imagens/PoesiandoPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj">POESIANDO</h2>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div id="Menu">
