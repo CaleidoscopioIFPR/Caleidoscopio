@@ -2,6 +2,7 @@
     session_start();
     
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,10 +32,10 @@
                 <div class = "right">
                     
                         <a class="itens" href="index.php">Home</a>
-                        <a class="itens" href="PaginaInicial/Projetos/index.html">Projetos</a>
+                        <a class="itens" href="PaginaInicial/Projetos/index.php">Projetos</a>
                         <a class="itens"href="PaginaInicial/Acervo/index.php">Acervo</a>
-                        <a class="itens"href="PaginaInicial/Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
-                        <a class="itens"href="PaginaInicial/SobreNós/index.html">Sobre Nós</a>
+                        <a class="itens"href="PaginaInicial/Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                        <a class="itens"href="PaginaInicial/SobreNós/index.php">Sobre Nós</a>
                         <?php if(isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="PaginaInicial/Cadastro/index.html">Perfil</a>
                         <?php endif; ?>
@@ -45,22 +46,20 @@
         </div>
         </nav>
     </header>
-    <div id="titulo" style="margin-top:30px;">
-        <h1> CALEIDOSCÓPI </h1>
-        <img class="logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-            width="90" height="90">
+    <div class = "titulo-container">
+        <img class = "logoCaleidoscopio" src="PaginaInicial/Imagens/logoCaleidoscopioCompleto.png">
+        <div class = "legenda">
+            <p style="text-align: left;">ca.lei.dos.co.pi.o</br>
+                1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas</br>
+                2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
+            </div>
     </div>
 
-    <div class="legenda">
-        <p style="text-align: left;">ca.lei.dos.co.pi.o<br>
-            1. Tubo cilíndrico com jogo interno de espelhos que produzem múltiplas imagens simétricas<br>
-            2. Conjunto de objetos, cores, formas etc. que formam imagens em constante mutação</p>
-    </div>
-
+    <!--
     <div id="animacao">
         <img src="PaginaInicial/Imagens/gifTeste2.gif" alt="animamcao" width="400px" height="500px">
     </div>
-
+  -->
     
 
     <div id="acervo">
@@ -91,38 +90,13 @@
                 </a>";
         }
         ?> 
-            
-            <!-- <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa2.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa3.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa4.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa5.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa6.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa7.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa8.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Acervo/index.html">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa1 copy.jpg" />
-            </a> -->
         </div>
 
     </div>
 
 
     <div id="arteEManifestacoes">
-        <a href="PaginaInicial/Arte e suas Manifestações/index.html">
+        <a href="PaginaInicial/Arte e suas Manifestações/index.php">
             <h2 class="subtitulo ArteEManifestacoes">Arte e suas Manifestações</h2>
         </a>
     </div>
@@ -130,63 +104,75 @@
     <div class="items-wrapper">
 
         <div class="items">
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa1.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa2.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa3.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa4.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa5.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa6.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa7.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa8.jpg" />
             </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.html">
+            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
                 <img src="PaginaInicial/Imagens/FiguraIlustrativa1 copy.jpg" />
             </a>
         </div>
 
     </div>
 
-
     <div id="projetos">
-        <a href="PaginaInicial/Projetos/index.html">
+        <a href="PaginaInicial/Projetos/index.php">
             <h2 class="subtitulo Projetos"> nossos projetos</h2>
         </a>
     </div>
+    <div id="blocos-container">
+        <div class="bloco dancart">
+            <a href="PaginaInicial/Projetos/index.php">
+                <div>
+                    <img src="PaginaInicial/Imagens/DancartPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj"> dançart</h2>
+                </div>
+            </a>
+        </div>
 
+        <div class="bloco rabiscando">
+            <a href="PaginaInicial/Projetos/index.php">
+                <div>
+                    <img src="PaginaInicial/Imagens/RabiscandoPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj">rabiscando</h2>
+                </div>
+            </a>
+        </div>
 
-    <div id="blocos">
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-dançart">
-                <h2 class="nomeProj"> dançart</h2>
-            </div>
-        </a>
-
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-rabiscando">
-                <h2 class="nomeProj">rabiscando</h2>
-            </div>
-        </a>
-
-        <a href="PaginaInicial/Projetos/index.html">
-            <div class="bloco-poesiando">
-                <h2 class="nomeProj"> poesiando </h2>
-            </div>
-        </a>
+        <div class="bloco poesiando">
+            <a href="PaginaInicial/Projetos/index.php">
+                <div>
+                    <img src="PaginaInicial/Imagens/PoesiandoPaginaInicial.jpg">
+                </div>
+                <div>
+                    <h2 class = "nomeProj">POESIANDO</h2>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div id="Menu">
@@ -205,8 +191,8 @@
             <hr width="2" size="250" color="black">
             <div class = links>
                 <ul>
-                    <li><a href = "PaginaInicial/SobreNós/index.html">Sobre Nós</a></li>
-                    <li><a href = "PaginaInicial/Contato/index.html">Contato</a></li>
+                    <li><a href = "PaginaInicial/SobreNós/index.php">Sobre Nós</a></li>
+                    <li><a href = "PaginaInicial/Contato/index.php">Contato</a></li>
                     <li><a href = "">FAQ</a></li>
                     <li><a href = "">Termos</a></li>
                 </ul>

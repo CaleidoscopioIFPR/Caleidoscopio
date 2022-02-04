@@ -1,8 +1,12 @@
+<?php 
+    session_start();
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <title>Celeidoscópio - Sobre Nós</title>
+    <title>Celeidoscópio - Nossos Projetos</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +14,7 @@
     <meta name="robots" content="dofollow" />
     <meta http-equiv="author" content="Brenda Alves, Gabriel Brasil e Gabriel Soler" />
     <meta http-equiv="pragma" content="no-cache" />
-    <link rel="stylesheet" type="text/css" href="../../CSS/sobre-nos.css">
+    <link rel="stylesheet" type="text/css" href="../../css/projetos.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/thabitregular/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/Fonts/Unna/stylesheet.css">
     <script src="https://kit.fontawesome.com/70fa70d7b9.js" crossorigin="anonymous"></script>
@@ -23,19 +27,13 @@
             object-fit: none;
         }
     </style>
-
 </head>
 
-<body>
-
-    <div class="LogoCaleidoscopio">
-        <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
-                width="85" heigh="85" alt="logo"> </a>
-    </div>
+<body style="background-color: #fbfbf8;">
 
     <header>
         <div class="LogoCaleidoscopio">
-            <a href="../../index.html"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
+            <a href="../../index.php"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
                     width="85" alt="logo"> </a>
         </div>
         <button class = "btn-menu"><i class="fas fa-bars"></i></button>
@@ -45,71 +43,71 @@
                 <div class = "left">
                 </div>
                 <div class = "right">
-                    <a class="itens" href="../../index.html">Home</a>
-                    <a class="itens" href="../Projetos/index.html">Projetos</a>
-                    <a class="itens" href="../Acervo/index.html">Acervo</a>
-                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
-                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
-                    <a class="itens" href="../Cadastro/index.html">Perfil</a>
+                    <a class="itens" href="../../index.php">Home</a>
+                    <a class="itens" href="../Projetos/index.php">Projetos</a>
+                    <a class="itens" href="../Acervo/index.php">Acervo</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
+                    <?php if(isset($_SESSION['usuario'])): ?>
+                    <a class="itens"href="../Cadastro/index.html">Perfil</a>
+                    <?php endif; ?>
+                    <?php if(!isset($_SESSION['usuario'])): ?>
+                    <a class="itens"href="../Autenticacao/index.html">Login</a>
+                    <?php endif; ?>
                 </div>
         </div>
         </nav>
 
-        
     </header>
-    <div class="cabecalho">
-
-        <div style="display: flex;">
-            <div id="animacao">
-                <img src="Imagens/pato.gif" alt="animamcao" width="300px" height="400px">
-            </div>
-            <div id="cabecalho-textos">
-                <div id="titulo">
-                    <p class="titulo">sobre nós</p>
-                </div>
-                <div id="legenda">
-                    <p class="legenda1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices
-                        dictum
-                        volutpat. Suspendisse
-                        varius justo risus, ac rhoncus risus gravida inLorem ipsum dolor sit amet, consectetur
-                        adipiscing
-                        elit.
-                        Aliquam ultrices dictum volutpat. Suspendisse varius justo risus, ac rhoncus risus gravida
-                        in.
-                    </p>
-                </div>
-            </div>
-
+    
+    <div class="cabeçalho">
+        
+        <div class=gifFofo>
+            <img src="Imagens/gifFofo.gif">
+        </div>
+        <div class="titulo-legenda">
+            <h1 class=titulos> PROJETOS</h1>  
+            <p class=legenda><q>Eu tenho natureza, arte e poesia, e se isso não for o suficiente, o que é suficiente?</q>
+            </p>
+        </div>
+        <div class=gifFofo2>
+            <img src="Imagens/gifFofo.gif">
         </div>
     </div>
-    <div id="conteudo">
-        <div id="devs">
 
-            <div class="dev">
-                <img src="Imagens/icon-fem1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
+        <h1 class="subtitulo esquerda">dançart</h1>
+        <div class=bloco style="background-color: #CE7D7D;">
+            <img class = imagem src = "Imagens/dancart.png">
+                <div class="texto">
+                    <p class = "direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+                        volutpat.
+                        Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+                </div>
+        </div>
+        <h1 class="subtitulo direita">rabiscando</h1>
+        <div class=bloco style = "background-color: #F8EB7E;">
+            <div class="texto">
+                <p class = "esquerda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+                    volutpat.
+                    Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
             </div>
 
-            <div class="dev">
-                <img src="Imagens/icon-mas1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
-            </div>
-
-            <div class="dev">
-                <img src="Imagens/icon-fem2.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
-            </div>
-
-            <div class="dev">
-                <img src="Imagens/icon-mas1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
-            </div>
+                    <img class = imagem src="Imagens/rabiscando.jpg">
 
         </div>
-        <div id="devsFotos">
-            <img src="imagens/todos.png" />
+        <h1 class="subtitulo esquerda">poesiando</h1>
+        <div class=bloco style = "background-color: #97D382;">
+
+                    <img class = imagem src="Imagens/poesiando.jpg">
+
+                <div class="texto">
+                    <p class="direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
+                        volutpat.
+                        Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+                </div>
         </div>
     </div>
+    
     <footer >
         <div class = container>
             <div>
@@ -123,8 +121,8 @@
             <hr width="2" size="250" color="black">
             <div class = links>
                 <ul>
-                    <li><a href = "../SobreNós/index.html">Sobre Nós</a></li>
-                    <li><a href = "../Contato/index.html">Contato</a></li>
+                    <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
+                    <li><a href = "../Contato/index.php">Contato</a></li>
                     <li><a href = "">FAQ</a></li>
                     <li><a href = "">Termos</a></li>
                 </ul>
@@ -151,12 +149,13 @@
     <script>
         $(".btn-menu").click(function(){
             $(".menu").show();
+            $("footer").hide();
         });
         $(".btn-close").click(function(){
             $(".menu").hide();
+            $("footer").show();
         })
     </script>
-
 </body>
 
 </html>
