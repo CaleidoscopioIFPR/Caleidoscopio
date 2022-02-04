@@ -55,15 +55,15 @@
                 </div>
                 <div class = "right">
                     <a class="itens" href="../../index.php">Home</a>
-                    <a class="itens" href="../Projetos/index.html">Projetos</a>
+                    <a class="itens" href="../Projetos/index.php">Projetos</a>
                     <a class="itens" href="../Acervo/index.php">Acervo</a>
-                    <a class="itens" href="../Arte e suas Manifestações/index.html">Arte e suas manifestações</a>
-                    <a class="itens" href="../SobreNós/index.html">Sobre Nós</a>
+                    <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                    <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
                     <?php if(isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="PaginaInicial/Cadastro/index.html">Perfil</a>
+                        <a class="itens"href="../Cadastro/index.html">Perfil</a>
                         <?php endif; ?>
                         <?php if(!isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="PaginaInicial/Autenticacao/index.html">Login</a>
+                        <a class="itens"href="../Autenticacao/index.html">Login</a>
                         <?php endif; ?>
                 </div>
         </div>
@@ -264,8 +264,8 @@
                 <hr width="2" size="250" color="black">
                 <div class = links>
                     <ul>
-                        <li><a href = "../SobreNós/index.html">Sobre Nós</a></li>
-                        <li><a href = "../Contato/index.html">Contato</a></li>
+                        <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
+                        <li><a href = "../Contato/index.php">Contato</a></li>
                         <li><a href = "">FAQ</a></li>
                         <li><a href = "">Termos</a></li>
                     </ul>
