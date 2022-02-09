@@ -35,6 +35,9 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
         
 
 ?>
+<?php 
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
