@@ -6,7 +6,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Celeidoscópio - Arte e suas Manifestações</title>
+    <title>Caleidoscópio - Arte e suas Manifestações</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

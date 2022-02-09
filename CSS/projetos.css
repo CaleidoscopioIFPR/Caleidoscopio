@@ -25,6 +25,7 @@ body {
     opacity: 1;
     height:fit-content;
     padding: 30px;
+    margin-bottom: 3rem;
 }
 .bloco .texto{
     color:black;
@@ -47,12 +48,12 @@ body {
     text-transform: uppercase;
 }
 .esquerda{
-    margin-left: 9%;
+    margin-left: 12%;
     justify-content: left;
     text-align: left;
 }
 .direita {
-    margin-right: 9%;
+    margin-right: 12%;
     justify-content: right;
     text-align: right;
     
