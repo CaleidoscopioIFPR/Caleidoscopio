@@ -42,6 +42,9 @@
                         <?php if(!isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="PaginaInicial/Autenticacao/index.html">Login</a>
                         <?php endif; ?>
+                        <?php if(isset($_SESSION['adm'])): ?>
+                        <a class="itens"href="PaginaInicial/Administrador/index.html">Painel de Controle</a>
+                        <?php endif; ?>
                 </div>
         </div>
         </nav>
