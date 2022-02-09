@@ -7,7 +7,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Celeidoscópio</title>
+    <title>Caleidoscópio</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,7 +99,6 @@
         <a href="PaginaInicial/Arte e suas Manifestações/index.php">
             <h2 class="subtitulo ArteEManifestacoes">Arte e suas Manifestações</h2>
         </a>
-        <h2>socorooooo</h2>
     </div>
 
     <div class="items-wrapper">
@@ -170,7 +169,7 @@
                     <img src="PaginaInicial/Imagens/PoesiandoPaginaInicial.jpg">
                 </div>
                 <div>
-                    <h2 class = "nomeProj">POESIANDO</h2>
+                    <h2 class = "nomeProj">poesiando</h2>
                 </div>
             </a>
         </div>
