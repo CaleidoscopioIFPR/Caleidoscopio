@@ -105,7 +105,12 @@
                             <div class="table-responsive">
                                 <div class="tableTop">
                                     <p>Título</p>
-                                    <p>Data Adicionado</p>                   
+                                    <p>Data Adicionado</p>
+                                    <a href = "">
+                                        <div class = "adicionarBtn">
+                                            <button>+Adicionar</button>     
+                                        </div>
+                                    </a>
                                 </div>
                                 <div class = "linha">
                                     <p>Arte de Rua</p>

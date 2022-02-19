@@ -239,6 +239,31 @@ main {
     margin-top: 1rem;
     margin-left: 1rem;
 }
+.adicionarBtn{
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(73, 73, 73, 0);
+    cursor: pointer;
+}
+.adicionarBtn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(73, 73, 73);
+    transition: 0.2s;
+}
+.adicionarBtn button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 .card-body {
     padding: .5rem 1rem 1rem 1rem;
     justify-content: center;
