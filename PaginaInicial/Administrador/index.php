@@ -63,7 +63,7 @@
                     <span>Painel de Controle</span></a>
                 </li>
                 <li>
-                    <a href="conteudosArtisticos.html"><span class="fas fa-palette"></span>
+                    <a href="conteudosArtisticos.php"><span class="fas fa-palette"></span>
                     <span>Conteúdos Artísticos</span></a>
                 </li>
                 <li>
