@@ -1,5 +1,18 @@
 <?php 
+    
     session_start();
+    $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+    if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        require("../Autenticacao/acess/conexao.php");
+    
+        $conexaoClass = new Conexao();
+        $conexao = $conexaoClass->conectar();
+    
+        $nome = $_SESSION['usuario'][0];
+        $sobrenome = $_SESSION['usuario'][1];
+        $adm = $_SESSION['usuario'][2];
+    }
     
 ?>
 <!DOCTYPE html>
@@ -43,17 +56,22 @@
                 <div class = "left">
                 </div>
                 <div class = "right">
-                    <a class="itens" href="../../index.php">Home</a>
-                    <a class="itens" href="../Projetos/index.php">Projetos</a>
-                    <a class="itens" href="../Acervo/index.php">Acervo</a>
-                    <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
-                    <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
-                    <?php if(isset($_SESSION['usuario'])): ?>
-                    <a class="itens"href="../Cadastro/index.html">Perfil</a>
-                    <?php endif; ?>
-                    <?php if(!isset($_SESSION['usuario'])): ?>
-                    <a class="itens"href="../Autenticacao/index.html">Login</a>
-                    <?php endif; ?>
+                    
+                <a class="itens" href="../../index.php">Home</a>
+                        <a class="itens" href="../Projetos/index.php">Projetos</a>
+                        <a class="itens"href="../Acervo/index.php">Acervo</a>
+                        <a class="itens"href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                        <a class="itens"href="../SobreNós/index.php">Sobre Nós</a>
+                        <?php if(!isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="../Autenticacao/index.html">Login</a>
+                        <?php endif; ?>
+                        <?php if($adm) : ?>
+                        <a class="itens"href="../Administrador/index.php">Painel de Controle</a>
+                        <?php endif; ?>                       
+                        <?php if(isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="../Autenticacao/acess/logout.php">Sair</a>
+                        <?php endif; ?>
+                        
                 </div>
         </div>
         </nav>

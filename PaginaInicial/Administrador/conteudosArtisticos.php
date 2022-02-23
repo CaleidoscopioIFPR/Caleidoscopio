@@ -47,8 +47,8 @@
 
     <div class="sidebar">
         <div class="sidebar-brand">
-            <span><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-                width="50" height="50"></span>
+            <span><a href="../../index.php"><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
+                width="50" height="50"></a></span>
             <h2><span>Caleidoscópio</span></h2>
         </div>
 
@@ -106,66 +106,41 @@
                                 <div class="tableTop">
                                     <p>Título</p>
                                     <p>Data Adicionado</p>
-                                    <a href = "">
+                                    <a href = "Adicionar Conteudo Artistico/index.php">
                                         <div class = "adicionarBtn">
                                             <button>+Adicionar</button>     
                                         </div>
                                     </a>
                                 </div>
-                                <div class = "linha">
-                                    <p>Arte de Rua</p>
-                                    <p>19/02/2022</p>
-                                    <button class='collapsible'><i class='fas fa-arrow-down' id='iconeSeta'></i></button>
-                                    <div class='content'>
-                                        <img src = "../Imagens/FiguraIlustrativa2.jpg"/>
-                                        <h4>Título</h4>
-                                        <p>Conteúdo: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                            Nulla eu tellus purus. Praesent consectetur neque quis eros accumsan,
-                                             non gravida elit malesuada. Nulla dapibus feugiat massa vel suscipit. 
-                                             Suspendisse eget urna sit amet lectus venenatis luctus. Vivamus feugiat 
-                                             nisi in enim tempus auctor. Sed et leo et elit egestas sodales. Integer 
-                                             lobortis risus sed varius efficitur. Integer in mattis turpis. In iaculis 
-                                             lorem sed vehicula eleifend. Cras sodales posuere arcu et varius. Donec suscipit 
-                                             egestas sapien.</p>
-                                    </div>
-                                </div>
+                                
                                 <?php 
-                                /*
-
-                                    $sql = "SELECT * FROM acervo";
+                                    $sql = "SELECT * FROM conteudos_artisticos";
                                     $consulta = mysqli_query($mysqli,$sql);
 
                                     while($dados = mysqli_fetch_array($consulta)){
-                                        $imagem = $dados[0];
-                                        $id = $dados[1];
-                                        $dataEnvio = $dados[2];
-                                        $title = $dados[3];
-                                        $aut = $dados[4];
-                                        $desc = $dados[5];
-                                        $cat = $dados[6];
+                                        $id = $dados[0];
+                                        $title = $dados[1];
+                                        $conteudo = $dados[2];
+                                        $imagem = $dados[3];
+                                        $data = $dados[4];
+                                        $autor = $dados[5];
                                         echo"<div class='linha'>
                                         
-                                        <p>$aut</p>
-                                        <p>$cat</p>
-                                        <p>$dataEnvio</p>
+                                        <p>$title</p>
+                                        <p>$data</p>
                                         <button class='collapsible'><i class='fas fa-arrow-down' id='iconeSeta'></i></button>
                                         <div class='content'>
-                                            <img src='../../PaginaInicial/Acervo/Imagens/Upload/$imagem' alt='' height='300px' width='300px'>
-                                            <p>(ID da obra: $id)</p>
+                                            <img src='../Arte e suas Manifestações/Imagens/upload/$imagem' alt='' height='300px' width='300px'>
                                             <p>Título: $title</p>
-                                            <p>Descrição: $desc</p>
-                                            <div>
+                                            <p>(ID da obra: $id)</p>
+                                            <p>Conteúdo: $conteudo</p>
                                             
-                                                <button class='noBt'><span class='fas fa-times-circle'></span></button>
-                                                <button class='yesBt' name='idUsuario'><span class='fas fa-check-circle'></span></button>
-                                            
-                                            </div>
                                         </div>
                                     </div>";
-                                    
                                     }
-                                    */
-                                ?>
+                                    ?>
+                                </div>
+                                
                                 
                             </div>
                         </div>

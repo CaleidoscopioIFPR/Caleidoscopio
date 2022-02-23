@@ -1,3 +1,39 @@
+<?php
+session_start();
+$mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+            $msg = false;
+            $titulo = isset($_POST['titulo'])?$_POST['titulo']:"";
+            $autor = isset($_POST['autor'])?$_POST['autor']:"";
+            $conteudo = isset($_POST['conteudo'])?$_POST['conteudo']:"";
+            $imagem = isset($_FILES['arquivoImagem'])?$_FILES['arquivoImagem']:"";
+            // echo "$titulo, $autor, $descricao, $categoria, $novo_nome" ;
+            
+    if(isset($_FILES['arquivoImagem'])){
+    
+
+        $extensao = strtolower(substr($_FILES['arquivoImagem']['name'], -4));
+        $novo_nome = md5(time()). $extensao;
+        $diretorio = "../../Arte e suas Manifestações/Imagens/upload/";
+
+
+        move_uploaded_file($_FILES['arquivoImagem']['tmp_name'], $diretorio.$novo_nome);
+
+        $sql_code = "INSERT INTO conteudos_artisticos (arquivo, id, dataEnvio, titulo, autor, conteudo) VALUES ('$novo_nome', NULL, NOW(), '$titulo', '$autor', '$conteudo')";
+
+        if($mysqli->query($sql_code)){
+            $msg = "Dados enviados com sucesso !!";
+            session_start();
+            $_SESSION['acervo'] = $msg;
+            header('Location: ../conteudosArtisticos.php');
+           
+        }else{
+            $msg = "Falha ao enviar conteúdo artístico, tente novamente mais tarde.";
+        }
+    }
+        
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +55,7 @@
 
     <header>
         <div class="LogoCaleidoscopio">
-            <a href="../../../index.html"><input type="image" name="botaoCaleidoscopio" src="../../Acervo/Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
+            <a href="../../../index.php"><input type="image" name="botaoCaleidoscopio" src="../../Acervo/Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
         <div class="tiulos">
             <h1 class="titulos"> Adicionar conteúdo <br> artístico </h1>
@@ -27,7 +63,7 @@
 
     </header>
     
-    <form id="formulario">
+    <form action="index.php" method="POST" enctype="multipart/form-data" id="formulario">
 
         <fieldset class="fieldsetForm1">
             <legend> Título</legend>           
@@ -36,7 +72,7 @@
 
         <fieldset class="fieldsetForm2" >
             <legend> Conteúdo</legend>
-            <textarea class="descricaoInput" name="descricao" cols="50" rows="15" maxlength=""></textarea>            
+            <textarea class="descricaoInput" name="conteudo" cols="50" rows="15" maxlength=""></textarea>            
         </fieldset>
 
         <div id="MotherUploadTag">

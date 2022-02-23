@@ -16,11 +16,24 @@
         if($query->rowCount()){
             $user = $query->fetchAll(PDO::FETCH_ASSOC);
             $query2 = $conexao->prepare("INSERT INTO acervoindex (id, arquivo, categoria, titulo, autor, descricao, dataEnvio) VALUES (?,?,?,?,?,?,?)");
-            $query2->execute(array(NULL, $user[0]['arquivo'], $user[0]['categoria'],$user[0]['titulo'], $user[0]['autor'],$user[0]['descricao'],$user[0]['dataEnvio'] ));
+           
+            if( $query2->execute(array(NULL, $user[0]['arquivo'], $user[0]['categoria'],$user[0]['titulo'], $user[0]['autor'],$user[0]['descricao'],$user[0]['dataEnvio'] ))) {
+                $query3 = $conexao->prepare("DELETE FROM acervo WHERE id = ?");
+                $query3->execute(array($id2));
+            }
             //echo print_r($user[0]["arquivo"]);
         }
-        
 
+        if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+            require("../Autenticacao/acess/conexao.php");
+        
+            $conexaoClass = new Conexao();
+            $conexao = $conexaoClass->conectar();
+        
+            $nome = $_SESSION['usuario'][0];
+            $sobrenome = $_SESSION['usuario'][1];
+            $adm = $_SESSION['usuario'][2];
+        }
 
 ?>
 
@@ -42,9 +55,8 @@
 </head>
 
 <body>
-    <header>
-        
-        <div class="LogoCaleidoscopio">
+<header>
+<div class="LogoCaleidoscopio">
             <a href="../../index.php"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png" width="85" heigh="85"  alt="logo"> </a>          
         </div>
         <button class = "btn-menu"><i class="fas fa-bars"></i></button>
@@ -54,20 +66,25 @@
                 <div class = "left">
                 </div>
                 <div class = "right">
-                    <a class="itens" href="../../index.php">Home</a>
-                    <a class="itens" href="../Projetos/index.php">Projetos</a>
-                    <a class="itens" href="../Acervo/index.php">Acervo</a>
-                    <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
-                    <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
-                    <?php if(isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="../Cadastro/index.html">Perfil</a>
-                        <?php endif; ?>
+                    
+                        <a class="itens" href="../../index.php">Home</a>
+                        <a class="itens" href="../Projetos/index.php">Projetos</a>
+                        <a class="itens"href="../Acervo/index.php">Acervo</a>
+                        <a class="itens"href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                        <a class="itens"href="../SobreNós/index.php">Sobre Nós</a>
                         <?php if(!isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="../Autenticacao/index.html">Login</a>
                         <?php endif; ?>
+                        <?php if($adm) : ?>
+                        <a class="itens"href="../Administrador/index.php">Painel de Controle</a>
+                        <?php endif; ?>                       
+                        <?php if(isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="../Autenticacao/acess/logout.php">Sair</a>
+                        <?php endif; ?>
+                        
                 </div>
         </div>
-        </nav>   
+        </nav>
     </header>
     <div style="text-align: center; margin-top: 200px;">
         <h1 class="titulos"> ACERVO </h1>
@@ -120,133 +137,7 @@
                 <img src ='Imagens/Upload/$imagem' class='imgCollection'  onclick='onClickProv(event,this.attributes[0].value)' alt = 'Figura ilustrativa 1'>               
             </div>";
         }
-        ?>   
-        
-        
-        <!-- <div class="figuraIlustrativa">
-            <div class="hover"> 
-                teeste aaaa dsss                 
-            </div>
-            <img src="Imagens/FiguraIlustrativa2.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 2">
-        </div>
-        
-        <div class="figuraIlustrativa">
-            <div class="hover"> 
-                teeste aaaa dsss                 
-            </div>
-            <img src="Imagens/FiguraIlustrativa3.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 3">
-        </div>
-
-        <div class="figuraIlustrativa">
-            <div class="hover"> 
-                teeste aaaa dsss                 
-            </div>
-            <img src="Imagens/FiguraIlustrativa4.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 4">
-        </div>
-
-        <div class="figuraIlustrativa">
-            <div class="hover"> 
-                teeste aaaa dsss                 
-            </div>
-            <img src="Imagens/FiguraIlustrativa5.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 5">
-        </div>
-
-        <div class="figuraIlustrativa">
-            <div class="hover"> 
-                teeste aaaa dsss                 
-            </div>
-            <img src="Imagens/FiguraIlustrativa6.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 6">
-        </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa1.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 1">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa2.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 2">
-                </p>
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa3.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 3">
-                </p>
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa4.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 4">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa5.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 5">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa6.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 6">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa7.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 7">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa8.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 8">
-                
-            </div>
-
-
-            
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa1.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 9">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa2.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 10">
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa3.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 11">
-                </p>
-            </div>
-
-            <div class="figuraIlustrativa">
-                <div class="hover"> 
-                    teeste aaaa dsss                 
-                </div>
-                <img src="Imagens/FiguraIlustrativa4.jpg" class="imgCollection"  onclick="onClickProv(event,this.attributes[0].value)" alt="Figura ilustrativa 12">
-            </div> -->
+        ?>          
     </div>
 
         <div id="Menu">

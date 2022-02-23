@@ -51,8 +51,8 @@
 
     <div class="sidebar">
         <div class="sidebar-brand">
-            <span><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-                width="50" height="50"></span>
+            <span><a href="../../index.php"><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
+                width="50" height="50"></a></span>
             <h2><span>Caleidoscópio</span></h2>
         </div>
 
@@ -101,7 +101,7 @@
 
         <main>
 
-            <div class="cards">
+            <!-- <div class="cards">
                 <div class="card-single">
                     <div>
                         <h1>54</h1>
@@ -143,7 +143,8 @@
                     </div>
                 </div>
 
-            </div>      
+            </div>       -->
+            
             
 
             <div class="recent-grid">
@@ -185,10 +186,10 @@
                                             <p>(ID da obra: $id)</p>
                                             <p>Título: $title</p>
                                             <p>Descrição: $desc</p>
-                                            <div>
+                                            <div class='botoes'>
                                             
                                                 <button class='noBt'><span class='fas fa-times-circle'></span></button>
-                                                <button class='yesBt' name='idUsuario'><span class='fas fa-check-circle'></span></button>
+                                                <button class='yesBt' name='id'><span class='fas fa-check-circle'></span></button>
                                             
                                             </div>
                                         </div>
@@ -202,115 +203,16 @@
                     </div>
                 </div>
 
-                              
-
+                
                 <div class="customers">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Administradores</h3>
-
-                            <!-- <button>Ver todos <span class="fas fa-arrow-right">
-                            </span></button> -->
+                            <h3>Aceitar Solicitação</h3>
                         </div>
                         <div class="card-body">
                             <div class="customer">
                                 <div class="info">
-                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Gabriel Brasil</h4>
-                                        <small>CEO Caleidoscopas</small>
-                                    </div>
-                                </div>
-                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        Email:
-                                        gabriel@gmail.com
-                                        <br>
-                                        Telefone:
-                                        (41)9922-9922
-                                        <!-- Email:
-                                        <div class="email">
-                                            gabriel@gmail.com
-                                        </div>
-                                        <br>
-                                        Telefone:
-                                        <div class="telefone">
-                                            (41)9922-9922
-                                        </div>    -->                                     
-                                    </div> 
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Brenda Alves</h4>
-                                        <small>Diretora Caleidoscopas</small>
-                                    </div>
-                                </div>
-                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        Email:
-                                        gabriel@gmail.com
-                                        <br>
-                                        Telefone:
-                                        (41)9922-9922                                    </div>
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Gabriel Soler</h4>
-                                        <small>Chefe Executivo Caleidoscopas</small>
-                                    </div>
-                                </div>
-                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        Email:
-                                        gabriel@gmail.com
-                                        <br>
-                                        Telefone:
-                                        (41)9922-9922                                    </div>
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Prof. Lidia</h4>
-                                        <small>Fundadora Caleidoscopas</small>
-                                    </div>
-                                </div>
-                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        Email:
-                                        gabriel@gmail.com
-                                        <br>
-                                        Telefone:
-                                        (41)9922-9922                                    </div>
-                            </div>
-
-                            <div class="customer">
-                                <div class="info">
-                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
-                                    <div>
-                                        <h4>Prof. Isis</h4>
-                                        <small>Auxiliar Adminsitrativa Caleidoscopas</small>
-                                    </div>
-                                </div>
-                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
-                                    <div class="content">
-                                        Email:
-                                        gabriel@gmail.com
-                                        <br>
-                                        Telefone:
-                                        (41)9922-9922                                    </div>
-                            </div>
-                                
-                            
-                        </div>
-                        <p>Id da Imagem:</p>
+                                <p>Selecione o ID da Imagem:</p>
                         <form action="../Acervo/index.php" method="POST">
                             <select name="id">
 
@@ -337,13 +239,157 @@
 
                                 ";
 
-                        }
-
-
-                        ?>
+                            }
+                            ?>
                             </select>
                             <button>Enviar Imagem</button>
                         </form>
+                    </div>
+                </div>
+
+                    <div class="customers">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Recusar Solicitação</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="customer">
+                                    <div class="info">
+                                    <p>Selecione o ID da Imagem:</p>
+                            <form action="index.php" method="POST">
+                                <select name="id">
+
+                                <?php
+
+                                $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+                                $sql = "SELECT * FROM acervo";
+                                $consulta = mysqli_query($mysqli,$sql);
+
+                                while($dados = mysqli_fetch_array($consulta)){
+
+                                    $imagem = $dados[0];
+                                    $id = $dados[1];
+                                    $dataEnvio = $dados[2];
+                                    $title = $dados[3];
+                                    $aut = $dados[4];
+                                    $desc = $dados[5];
+                                    $cat = $dados[6];
+
+                                    echo 
+                                    "
+
+                                    <option>$id</option>
+
+                                    ";
+
+                                }
+                                ?>
+                                </select>
+                                <button class="botao botaoAcao">Excluir Imagem</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Administradores</h3>
+
+                            <!-- <button>Ver todos <span class="fas fa-arrow-right">
+                            </span></button> -->
+                        </div>
+                        <div class="card-body">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Gabriel Brasil</h4>
+                                        <small>CEO Caleidosopio</small>
+                                    </div>
+                                </div>
+                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
+                                    <div class="content">
+                                        Email:
+                                        gabriel@gmail.com
+                                        <br>
+                                        Telefone:
+                                        (41)9922-9922                               
+                                    </div> 
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Brenda Alves</h4>
+                                        <small>Diretora Caleidosopio</small>
+                                    </div>
+                                </div>
+                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
+                                    <div class="content">
+                                        Email:
+                                        gabriel@gmail.com
+                                        <br>
+                                        Telefone:
+                                        (41)9922-9922                                    </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Gabriel Soler</h4>
+                                        <small>Chefe Executivo Caleidosopio</small>
+                                    </div>
+                                </div>
+                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
+                                    <div class="content">
+                                        Email:
+                                        gabriel@gmail.com
+                                        <br>
+                                        Telefone:
+                                        (41)9922-9922                                    </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Prof. Lidia</h4>
+                                        <small>Fundadora Caleidosopio</small>
+                                    </div>
+                                </div>
+                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
+                                    <div class="content">
+                                        Email:
+                                        gabriel@gmail.com
+                                        <br>
+                                        Telefone:
+                                        (41)9922-9922                                    </div>
+                            </div>
+
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="Imagens/professora.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Prof. Isis</h4>
+                                        <small>Auxiliar Adminsitrativa </small>
+                                    </div>
+                                </div>
+                                <button class="collapsible"><span class="fas fa-arrow-down" id="iconeSeta"></span></button>
+                                    <div class="content">
+                                        Email:
+                                        gabriel@gmail.com
+                                        <br>
+                                        Telefone:
+                                        (41)9922-9922
+                                    </div>
+                            </div>
+                                
+                            
+                        </div>
+                        
                     </div>
                 </div>
             </div>

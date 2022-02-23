@@ -35,16 +35,19 @@
                     <div class = "left">
                     </div>
                     <div class = "right">
-                        <a class="itens" href="../../index.php">Home</a>
+                    <a class="itens" href="../../index.php">Home</a>
                         <a class="itens" href="../Projetos/index.php">Projetos</a>
-                        <a class="itens" href="../Acervo/index.php">Acervo</a>
-                        <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
-                        <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
-                        <?php if(isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="../Cadastro/index.html">Perfil</a>
-                        <?php endif; ?>
+                        <a class="itens"href="../Acervo/index.php">Acervo</a>
+                        <a class="itens"href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                        <a class="itens"href="../SobreNós/index.php">Sobre Nós</a>
                         <?php if(!isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="../Autenticacao/index.html">Login</a>
+                        <?php endif; ?>
+                        <?php if($adm) : ?>
+                        <a class="itens"href="../Administrador/index.php">Painel de Controle</a>
+                        <?php endif; ?>                       
+                        <?php if(isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="../Autenticacao/acess/logout.php">Sair</a>
                         <?php endif; ?>
                     </div>
             </div>
