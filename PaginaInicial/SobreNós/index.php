@@ -77,14 +77,11 @@
                     <p class="titulo">sobre nós</p>
                 </div>
                 <div id="legenda">
-                    <p class="legenda1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices
-                        dictum
-                        volutpat. Suspendisse
-                        varius justo risus, ac rhoncus risus gravida inLorem ipsum dolor sit amet, consectetur
-                        adipiscing
-                        elit.
-                        Aliquam ultrices dictum volutpat. Suspendisse varius justo risus, ac rhoncus risus gravida
-                        in.
+                    <p class="legenda1"> O site do Caleidoscópio foi desenvolvido por uma equipe de estudantes concluintes do curso técnico integrado de Informática como projeto de conclusão de curso no Instituto Federal do Paraná - Campus Curitiba.
+                        O grupo é composto por três alunos fascinados pelo mundo da técnologia e amantes da arte. Além disso, o trio foi orientado por uma professora graduada em artes visuais e coorientado por uma professora com licenciatura em educação artística.
+                        Todos os integrantes desse projeto foram cruciais para a criação e desenvolvimento técnico do site.
+                
+                        
                     </p>
                 </div>
             </div>
@@ -95,28 +92,41 @@
         <div id="devs">
 
             <div class="dev">
-                <img src="Imagens/icon-fem1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
+                <img src="Imagens/brebFoto.jpg" alt="icone" />
+                <p> <strong> Brenda Alves </strong></p>
+                <p> Artista visual e futura estudante de design na UTFPR com grande interesse em programação</p>
             </div>
 
             <div class="dev">
-                <img src="Imagens/icon-mas1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
+                <img src="Imagens/brazas2Foto.jpg" alt="icone" />
+                <p><strong>Gabriel Brasil</strong></p>
+                <p> Aficionado em desenvolvimento de sistemas e atleta amador</p>
+                </div>
+
+            <div class="dev">
+                <img src="Imagens/solerFoto.jpg" alt="icone" />
+                <p><strong>Gabriel Soler</strong></p>
+                    <p> Apaixonado por tecnologia e tudo que envolve lógica matemática</p> 
             </div>
 
             <div class="dev">
-                <img src="Imagens/icon-fem2.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
+                <img src="Imagens/ligiaFoto.jpg" alt="icone" />
+                <p><strong>Ligia Battezzati</strong></p>
+                <p> Professora de Artes no IFPR e criadora do projeto Caleidoscópio</p>
             </div>
 
             <div class="dev">
-                <img src="Imagens/icon-mas1.png" alt="icone" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum </p>
+                <img src="Imagens/isisFoto.jpeg" alt="icone" />
+                <p><strong>Isis Tavares</strong></p>
+                <p> Também professora de Artes no IFPR e coorientadora do site Caleidoscópio</p>
             </div>
 
         </div>
         <div id="devsFotos">
-            <img src="imagens/todos.png" />
+            <div class="grupo-wrapper">
+            <img class="random" src="Imagens/fotoRandom2.jpg" />
+            <legend class="legendText"><i> Foto com todos os integrantes da equipe </i> </legend>
+                    </div>
         </div>
     </div>
     <footer >
@@ -134,7 +144,7 @@
                 <ul>
                     <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
                     <li><a href = "../Contato/index.php">Contato</a></li>
-                    <li><a href = "PaginaInicial/Faq/index.php">FAQ</a></li>
+                    <li><a href = "../Faq/index.php">FAQ</a></li>
                 </ul>
             </div>
             <div class = "quadro">

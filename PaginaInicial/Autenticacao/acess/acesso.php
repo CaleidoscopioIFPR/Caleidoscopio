@@ -128,13 +128,13 @@ class Acesso extends GlobalSendMail
 
             $novasenha = md5($senha);
 
-            if($user['senha'] == md5($senha) && $user['confirmarEmail']){
+            if($user['senha'] == $senha && $user['confirmarEmail']){
                 session_start();
                 $_SESSION['usuario'] = array($user['nome'], $user['sobrenome'], $user['adm']);
                 return json_encode(array("erro" => 0));
             }
 
-            if ($user['senha'] == md5($senha) && !$user['confirmarEmail']) {
+            if ($user['senha'] ==$senha && !$user['confirmarEmail']) {
                 return json_encode(array("erro" => 2, "mensagem" => "Olá {$user['nome']} {$user['sobrenome']}, por favor confirme sua conta"));
             }
 
@@ -170,7 +170,7 @@ class Acesso extends GlobalSendMail
         $token = $geraToken();
 
         $query = $conexao->prepare("INSERT INTO usuario (nome,sobrenome,email,senha,adm,token,confirmarEmail) VALUES (?,?,?,?,?,?,?)");
-        if ($query->execute(array($nome, $sobrenome, $email, md5($senha), 0, $token,  0))) {
+        if ($query->execute(array($nome, $sobrenome, $email, $senha, 0, $token,  0))) {
             /*
             session_start();
             $_SESSION['usuario'] = array($nome, $sobrenome, 0);*/

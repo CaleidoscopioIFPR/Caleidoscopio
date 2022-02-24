@@ -95,33 +95,35 @@
 
         <h1 class="subtitulo esquerda">dançart</h1>
         <div class=bloco style="background-color: #CE7D7D;">
-            <img class = imagem src = "Imagens/dancart.png">
+            <img class = imagem src = "Imagens/DancartPaginaInicial.jpg">
                 <div class="texto">
-                    <p class = "direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
-                        volutpat.
-                        Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+                    <p class = "direita"> O Dançart surgiu da ideia de mostrar que a dança não é algo exclusivo e seletivo,
+                        e sim uma linguagem da arte que todos podem experimentar como um meio de se expressar, se comunicar, 
+                        se permitir sentir e conhecer o próprio corpo, independente de ter uma experiência anterior.</p>
                 </div>
         </div>
         <h1 class="subtitulo direita">rabiscando</h1>
         <div class=bloco style = "background-color: #F8EB7E;">
             <div class="texto">
-                <p class = "esquerda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
-                    volutpat.
-                    Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+                <p class = "esquerda">O Rabiscando é uma ação idealizada pelos estudantes que desejavam ampliar 
+                    o tempo para produção de trabalhos das Artes Visuais. Ele surge como um momento em que as 
+                    pessoas interessadas se encontram, semanalmente, para trocar ideias, materiais, 
+                    técnicas e experiências relacionadas a essa linguagem artística.</p>
             </div>
 
-                    <img class = imagem src="Imagens/rabiscando.jpg">
+                    <img class = imagem src="Imagens/RabiscandoPaginaInicial.jpg">
 
         </div>
         <h1 class="subtitulo esquerda">poesiando</h1>
         <div class=bloco style = "background-color: #97D382;">
 
-                    <img class = imagem src="Imagens/poesiando.jpg">
+                    <img class = imagem src="Imagens/PoesiandoPaginaInicial.jpg">
 
                 <div class="texto">
-                    <p class="direita">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices dictum
-                        volutpat.
-                        Suspendisse varius justo risus, ac rhoncus risus gravida in</p>
+                    <p class="direita">O Poesiando propõe promover um espaço criativo e
+                    democrático de expressão e reflexão, criar um ambiente de posicionamento e exposição de
+                    sentimentos, reunindo estudantes para que compartilhem momentos artísticos e íntimos,
+                    sendo também um escape para as preocupações no contexto do ensino técnico.</p>
                 </div>
         </div>
     </div>
@@ -141,7 +143,7 @@
                 <ul>
                     <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
                     <li><a href = "../Contato/index.php">Contato</a></li>
-                    <li><a href = "PaginaInicial/Faq/index.php">FAQ</a></li>
+                    <li><a href = "../Faq/index.php">FAQ</a></li>
                 </ul>
             </div>
             <div class = "quadro">
