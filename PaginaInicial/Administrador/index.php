@@ -36,10 +36,7 @@
             if($query3 = $conexao->prepare("DELETE FROM acervo WHERE id = ?")) {
                 echo"deu certo";
             }
-        }
-
-        
-    
+        } 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
