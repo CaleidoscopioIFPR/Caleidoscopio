@@ -126,7 +126,9 @@ class Acesso extends GlobalSendMail
         if ($query->rowCount()) {
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
-            if($user['senha'] == $senha && $user['confirmarEmail']){
+            $novasenha = md5($senha);
+
+            if($user['senha'] == md5($senha) && $user['confirmarEmail']){
                 session_start();
                 $_SESSION['usuario'] = array($user['nome'], $user['sobrenome'], $user['adm']);
                 return json_encode(array("erro" => 0));

@@ -158,14 +158,23 @@ header {
     margin-right: 40px;
     padding-top: 5rem;
 }
+
+.titulo-img{
+    max-width: 450px;
+    text-overflow: ellipsis;
+    font-family: 'thabitregular';
+    font-style: none;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
 .descricao-img{
     max-width: 450px;
     text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
     font-family: 'thabitregular';
     font-style: none;
-   
+    font-size: 20px;
 }
 .lista-imgs a{
     text-decoration: none;
@@ -186,24 +195,21 @@ header {
  }
 
  #father {
+    border:  black 10px double;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px;
-    margin-top: 300px;
+    width: 80%;
+    margin: 30px auto;
+    padding: 50px;
+    height: 700px;
   }
 
 .figuraIlustrativa{
     width: 350px;
     height: 450px;
-    cursor: pointer;
-    margin: 30px;
 }
 
 .figuraIlustrativa img {
-    
     object-fit: cover;
     transition: all 0.5s;
     width: 350px;

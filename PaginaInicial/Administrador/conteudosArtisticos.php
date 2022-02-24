@@ -63,11 +63,7 @@
                     <span>Conteúdos Artísticos</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="fas fa-images"></span>
-                    <span>Imagens no Acervo</span></a>
-                </li>
-                <li>
-                    <a href="conta.html"><span class="far fa-user-circle"></span>
+                    <a href="conta.php"><span class="far fa-user-circle"></span>
                     <span>Conta</span></a>
                 </li>
 
@@ -86,9 +82,11 @@
                 </h2>
 
                 <div class="user-wrapper">
-                    <img src="Imagens/professora.png"60px" height="60px">
+                    <img src="Imagens/profile_icon.png"60px" height="60px">
                     <div>
-                        <h4>Professora Johnson</h4>
+                        <?php 
+                            echo"<h4>$nome $sobrenome</h4>"
+                            ?>
                         <small>Administrador(a)</small>
                     </div>
                 </div>
