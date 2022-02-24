@@ -80,7 +80,7 @@
 
     </div>
 
-    <div id="father">
+    
     <?php 
         $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
         $sql = "SELECT * FROM conteudos_artisticos";
@@ -93,15 +93,19 @@
             $imagem = $dados[3];
             $dataEnvio = $dados[4];
             $aut = $dados[5];
-            echo"<div id='conteudo'>          
+            echo"
+            <div id='father'>
                 <div class='figuraIlustrativa'> 
-                    <img class='imgCollection' src='Imagens/Upload/$imagem' alt ' figura ilustrativa ' width='450' height='515,94'>
-                    <p class='descricao-img'> $title</p>    
+                    <p class='titulo-img'> $title</p>
+                    <img class='imgCollection' src='Imagens/Upload/$imagem' alt ' figura ilustrativa ' width='450' height='515,94'>   
                 </div>
-            </a>";
+                <div>
+                    <p class='descricao-img'> $desc</p>
+                </div>
+            </div>";
         }
         ?>
-    </div>
+    
 
 
 
