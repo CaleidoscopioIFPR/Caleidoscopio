@@ -281,19 +281,6 @@ td {
 }
 
 
-.botaoAcao {
-    background-color: black;
-    color: white;
-    border: 2px solid rgb(73, 73, 73);
-    width: 208px;
-    height: 63px;
-    margin: 15px;
-}
-
-.botaoAcao:hover {
-    background-color:rgb(0, 0, 0);
-    color: black;
-}
 
 .botao {
     border: none;
@@ -308,6 +295,21 @@ td {
     cursor: pointer;
 }
 
+.botaoAcao {
+    margin-left: 15px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(73, 73, 73);
+    width: 150px;
+    height: 60px;
+    margin: 15px;
+}
+
+.botaoAcao:hover {
+    background-color:#fff;
+    color: black;
+    border: 4px black solid;
+}
 
 
 .customer {
