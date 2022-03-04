@@ -89,8 +89,7 @@
                 <ul>
                     <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
                     <li><a href = "../Contato/index.php">Contato</a></li>
-                    <li><a href = "">FAQ</a></li>
-                    <li><a href = "">Termos</a></li>
+                    <li><a href = "PaginaInicial/Faq/index.php">FAQ</a></li>
                 </ul>
             </div>
             <div class = "quadro">

@@ -1,5 +1,18 @@
 <?php 
+    
     session_start();
+    $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+    if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        require("../Autenticacao/acess/conexao.php");
+    
+        $conexaoClass = new Conexao();
+        $conexao = $conexaoClass->conectar();
+    
+        $nome = $_SESSION['usuario'][0];
+        $sobrenome = $_SESSION['usuario'][1];
+        $adm = $_SESSION['usuario'][2];
+    }
     
 ?>
 <!DOCTYPE html>
@@ -29,26 +42,31 @@
                 </div>
             </div>
             <button class = "btn-menu"><i class="fas fa-bars"></i></button>
-            <nav class = "menu">
-                <a class = "btn-close"><i class="fas fa-times"></i></a>
-                <div class = "container">
-                    <div class = "left">
-                    </div>
-                    <div class = "right">
-                        <a class="itens" href="../../index.php">Home</a>
+        <nav class = "menu">
+            <a class = "btn-close"><i class="fas fa-times"></i></a>
+            <div class = "container">
+                <div class = "left">
+                </div>
+                <div class = "right">
+                    
+                <a class="itens" href="../../index.php">Home</a>
                         <a class="itens" href="../Projetos/index.php">Projetos</a>
-                        <a class="itens" href="../Acervo/index.php">Acervo</a>
-                        <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
-                        <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
-                        <?php if(isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="../Cadastro/index.html">Perfil</a>
-                        <?php endif; ?>
+                        <a class="itens"href="../Acervo/index.php">Acervo</a>
+                        <a class="itens"href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
+                        <a class="itens"href="../SobreNós/index.php">Sobre Nós</a>
                         <?php if(!isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="../Autenticacao/index.html">Login</a>
                         <?php endif; ?>
-                    </div>
-            </div>
-            </nav>
+                        <?php if($adm) : ?>
+                        <a class="itens"href="../Administrador/index.php">Painel de Controle</a>
+                        <?php endif; ?>                       
+                        <?php if(isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="../Autenticacao/acess/logout.php">Sair</a>
+                        <?php endif; ?>
+                        
+                </div>
+        </div>
+        </nav>
     </header>
 
     <div class="titulo-wrapper" style="margin-top:150px;">
@@ -58,48 +76,39 @@
         </div>
         <div>
             <img src="../Arte e suas Manifestações/Imagens/titulo-img.png" />
-
         </div>
 
     </div>
 
-    <div class="lista-imgs">
-        <a class="imagem-wrapper" href="VerMais.php">
-            <div>
-                <img class=cover src="Imagens/imagem-ilustrativa.jpg.jpg" alt " figura ilustrativa " width="450"
-                    height="515,94">
-                <p class="descricao-img">kjeskfjfjkesskdarflodkfkrgjgjdfjsllsfj</p>
-            </div>
-        </a>
-        <a class="imagem-wrapper" href="VerMais.php">
-            <div>
-                <img class=cover src="Imagens/imagem-ilustrativa.jpg.jpg" alt " figura ilustrativa " width="450"
-                    height="515,94">
-                <p class="descricao-img">kjeskfjfjkesskdrflodkfkrgjgjdfjsllsfj</p>
-            </div>
-        </a>
-        <a class="imagem-wrapper" href="VerMais.php">
-            <div>
-                <img class=cover src="Imagens/imagem-ilustrativa.jpg.jpg" alt " figura ilustrativa " width="450"
-                    height="515,94">
-                <p class="descricao-img">kjeskfjfjkesskdrflodkfkrgjgjdfjsllsfj</p>
-            </div>
-        </a>
-        <a class="imagem-wrapper" href="VerMais.php">
-            <div>
-                <img class=cover src="Imagens/imagem-ilustrativa.jpg.jpg" alt " figura ilustrativa " width="450"
-                    height="515,94">
-                <p class="descricao-img">kjeskfjfjkesskdrflodkfkrgjgjdfjsllsfj</p>
-            </div>
-        </a>
-        <a class="imagem-wrapper" href="VerMais.php">
-            <div>
-                <img class=cover src="Imagens/imagem-ilustrativa.jpg.jpg" alt " figura ilustrativa " width="450"
-                    height="515,94">
-                <p class="descricao-img">kjeskfjfjkesskdrflodkfkrgjgjdfjsllsfj</p>
-            </div>
-        </a>
-    </div>
+    
+    <?php 
+        $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+        $sql = "SELECT * FROM conteudos_artisticos";
+        $consulta = mysqli_query($mysqli,$sql);
+
+        while($dados = mysqli_fetch_array($consulta)){
+            $id = $dados[0];
+            $title = $dados[1];
+            $desc = $dados[2];
+            $imagem = $dados[3];
+            $dataEnvio = $dados[4];
+            $aut = $dados[5];
+            echo"
+            <div id='father'>
+                <div class='figuraIlustrativa'> 
+                    <p class='titulo-img'> $title</p>
+                    <img class='imgCollection' src='Imagens/Upload/$imagem' alt ' figura ilustrativa ' width='450' height='515,94'>   
+                </div>
+                <div>
+                    <p class='descricao-img'> $desc</p>
+                </div>
+            </div>";
+        }
+        ?>
+    
+
+
+
 
 
     <footer >
@@ -117,8 +126,7 @@
                 <ul>
                     <li><a href = "../SobreNós/index.php">Sobre Nós</a></li>
                     <li><a href = "../Contato/index.php">Contato</a></li>
-                    <li><a href = "">FAQ</a></li>
-                    <li><a href = "">Termos</a></li>
+                    <li><a href = "PaginaInicial/Faq/index.php">FAQ</a></li>
                 </ul>
             </div>
             <div class = "quadro">
@@ -139,6 +147,7 @@
     <div class = copyright>
         <p>Todos os direitos reservados - Caleidoscópio © 2022</p>
     </div>
+    <script src="conteudo.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $(".btn-menu").click(function(){

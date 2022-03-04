@@ -32,7 +32,6 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
             $msg = "Falha ao enviar dados da obra, tente novamente mais tarde.";
         }
     }
-        
 
 ?>
 <?php 
@@ -62,27 +61,7 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
             <a href="../../index.php"><input type="image" name="botaoCaleidoscopio" src="Imagens/logoCaleidoscopio.png"
                     width="85" heigh="85" alt="logo"> </a>
         </div>
-        <button class = "btn-menu"><i class="fas fa-bars"></i></button>
-        <nav class = "menu">
-            <a class = "btn-close"><i class="fas fa-times"></i></a>
-            <div class = "container">
-                <div class = "left">
-                </div>
-                <div class = "right">
-                    <a class="itens" href="../../index.php">Home</a>
-                    <a class="itens" href="../Projetos/index.php">Projetos</a>
-                    <a class="itens" href="../Acervo/index.php">Acervo</a>
-                    <a class="itens" href="../Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
-                    <a class="itens" href="../SobreNós/index.php">Sobre Nós</a>
-                    <?php if(isset($_SESSION['usuario'])): ?>
-                    <a class="itens"href="../Cadastro/index.html">Perfil</a>
-                    <?php endif; ?>
-                    <?php if(!isset($_SESSION['usuario'])): ?>
-                    <a class="itens"href="../Autenticacao/index.html">Login</a>
-                    <?php endif; ?>
-                </div>
-        </div>
-        </nav>
+        
     </header>
     
     <div id="icone">
@@ -110,10 +89,10 @@ $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
 
         <div id="MotherUploadTag">
             <div class="botaoUpload">
-                <input type="file" name="arquivoImagem" id="uploadBtn" value="Escolha o arquivo" hidden />
+                <input type="file" name="arquivoImagem" id="uploadBtn" required="required" value="Escolha o arquivo" hidden />
                 <label for="uploadBtn">Escolha o arquivo</label>
                 <span id="file-chosen">
-
+                        
                 </span>
             </div>
 

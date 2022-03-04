@@ -1,3 +1,23 @@
+<?php 
+
+    session_start();
+    $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+    if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        require("../Autenticacao/acess/conexao.php");
+    
+        $conexaoClass = new Conexao();
+        $conexao = $conexaoClass->conectar();
+    
+        $nome = $_SESSION['usuario'][0];
+        $sobrenome = $_SESSION['usuario'][1];
+        $adm = $_SESSION['usuario'][2];
+    } else {
+        echo "<script>window.location = '../Autenticacao/index.html'</script>";
+    }
+    
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,8 +47,8 @@
 
     <div class="sidebar">
         <div class="sidebar-brand">
-            <span><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
-                width="50" height="50"></span>
+            <span><a href="../../index.php"><img class="logoCaleidoscopio" src="../Imagens/logoCaleidoscopio.png" alt="logoTitulo"
+                width="50" height="50"></a></span>
             <h2><span>Caleidoscópio</span></h2>
         </div>
 
@@ -39,12 +59,8 @@
                     <span>Painel de Controle</span></a>
                 </li>
                 <li>
-                    <a href="conteudosArtisticos.html"><span class="fas fa-palette"></span>
+                    <a href="conteudosArtisticos.php"><span class="fas fa-palette"></span>
                     <span>Conteúdos Artísticos</span></a>
-                </li>
-                <li>
-                    <a href=""><span class="fas fa-images"></span>
-                    <span>Imagens no Acervo</span></a>
                 </li>
                 <li>
                     <a href="" class="active"><span class="far fa-user-circle"></span>
@@ -66,9 +82,11 @@
                 </h2>
 
                 <div class="user-wrapper">
-                    <img src="Imagens/professora.png"60px" height="60px">
+                    <img src="Imagens/profile_icon.png"60px" height="60px">
                     <div>
-                        <h4>Professora Johnson</h4>
+                        <?php 
+                            echo"<h4>$nome $sobrenome</h4>"
+                            ?>
                         <small>Administrador(a)</small>
                     </div>
                 </div>
@@ -99,10 +117,8 @@
 
         <div class="wrapper">
             <div class="left">
-                <img src="Imagens/professora.png" 
+                <img src="Imagens/profile_icon.png" 
                 alt="user" width="100">
-                <h4>Gabriel Brasil</h4>
-                 <p>Professor de Química</p>
             </div>
             <div class="right">
                 <div class="info">
@@ -110,7 +126,9 @@
                     <div class="info_data">
                         <div class="data">
                             <h4>Nome Completo</h4>
-                            <p>Gabriel de Paula Brasil</p>
+                            <?php 
+                                echo"<h4>$nome $sobrenome</h4>"
+                            ?>
                          </div>
                          <div class="data">
                             <h4>E-mail</h4>

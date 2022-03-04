@@ -191,21 +191,6 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
-.botaoFiltrar {
-    background-color: white;
-    color: black;
-    border: 2px solid rgb(73, 73, 73);
-    width: 145px;
-    height: 63px;
-    margin: 15px;
-}
-
-.botaoFiltrar:hover {
-    background-color:rgb(0, 0, 0);
-    color: white;
- }
-
-
 .botaoAdicionar {
     background-color: white;
     color: black;

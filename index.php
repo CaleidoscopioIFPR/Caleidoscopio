@@ -1,5 +1,18 @@
 <?php 
+    
     session_start();
+    $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+
+    if (isset($_SESSION['usuario']) && is_array($_SESSION['usuario'])) {
+        require("PaginaInicial/Autenticacao/acess/conexao.php");
+    
+        $conexaoClass = new Conexao();
+        $conexao = $conexaoClass->conectar();
+    
+        $nome = $_SESSION['usuario'][0];
+        $sobrenome = $_SESSION['usuario'][1];
+        $adm = $_SESSION['usuario'][2];
+    }
     
 ?>
 
@@ -36,15 +49,16 @@
                         <a class="itens"href="PaginaInicial/Acervo/index.php">Acervo</a>
                         <a class="itens"href="PaginaInicial/Arte e suas Manifestações/index.php">Arte e suas manifestações</a>
                         <a class="itens"href="PaginaInicial/SobreNós/index.php">Sobre Nós</a>
-                        <?php if(isset($_SESSION['usuario'])): ?>
-                        <a class="itens"href="PaginaInicial/Cadastro/index.html">Perfil</a>
-                        <?php endif; ?>
                         <?php if(!isset($_SESSION['usuario'])): ?>
                         <a class="itens"href="PaginaInicial/Autenticacao/index.html">Login</a>
                         <?php endif; ?>
-                        <?php if(isset($_SESSION['adm'])): ?>
-                        <a class="itens"href="PaginaInicial/Administrador/index.html">Painel de Controle</a>
+                        <?php if($adm) : ?>
+                        <a class="itens"href="PaginaInicial/Administrador/index.php">Painel de Controle</a>
+                        <?php endif; ?>                       
+                        <?php if(isset($_SESSION['usuario'])): ?>
+                        <a class="itens"href="PaginaInicial/Autenticacao/acess/logout.php">Sair</a>
                         <?php endif; ?>
+                        
                 </div>
         </div>
         </nav>
@@ -107,33 +121,23 @@
     <div class="items-wrapper">
 
         <div class="items">
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa1.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa2.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa3.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa4.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa5.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa6.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa7.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa8.jpg" />
-            </a>
-            <a class="item" href="PaginaInicial/Arte e suas Manifestações/index.php">
-                <img src="PaginaInicial/Imagens/FiguraIlustrativa1 copy.jpg" />
-            </a>
+        <?php 
+        $mysqli = mysqli_connect("localhost","root","","bd_caleidoscopio");
+        $sql = "SELECT * FROM conteudos_artisticos";
+        $consulta = mysqli_query($mysqli,$sql);
+
+        while($dados = mysqli_fetch_array($consulta)){
+            $id = $dados[0];
+            $title = $dados[1];
+            $desc = $dados[2];
+            $imagem = $dados[3];
+            $dataEnvio = $dados[4];
+            $aut = $dados[5];
+            echo"<a class='item' href='PaginaInicial/Arte e suas Manifestações/index.php'>
+                    <img src='PaginaInicial/Arte e suas Manifestações/Imagens/Upload/$imagem' />
+                </a>";
+        }
+        ?> 
         </div>
 
     </div>
@@ -196,8 +200,7 @@
                 <ul>
                     <li><a href = "PaginaInicial/SobreNós/index.php">Sobre Nós</a></li>
                     <li><a href = "PaginaInicial/Contato/index.php">Contato</a></li>
-                    <li><a href = "">FAQ</a></li>
-                    <li><a href = "">Termos</a></li>
+                    <li><a href = "PaginaInicial/Faq/index.php">FAQ</a></li>
                 </ul>
             </div>
             <div class = "quadro">

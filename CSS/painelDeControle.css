@@ -216,7 +216,7 @@ main {
 }
 
 .recent-grid {
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 65% auto;
@@ -282,7 +282,32 @@ td {
 }
 
 
+.botaoAcao {
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(73, 73, 73);
+    width: 208px;
+    height: 63px;
+    margin: 15px;
+}
 
+.botaoAcao:hover {
+    background-color:rgb(0, 0, 0);
+    color: black;
+}
+
+.botao {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
 
 
@@ -518,6 +543,11 @@ body::-webkit-scrollbar {
     margin-top: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+.botoes {
+    margin: 0 auto;
+    display: none;
 }
 
 .noBt {
