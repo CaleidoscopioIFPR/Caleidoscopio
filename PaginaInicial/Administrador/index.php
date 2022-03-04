@@ -260,7 +260,7 @@
                             }
                             ?>
                             </select>
-                            <button>Enviar Imagem</button>
+                            <button class="">Enviar Imagem</button>
                         </form>
                     </div>
                 </div>
