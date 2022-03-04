@@ -138,7 +138,7 @@ class Acesso extends GlobalSendMail
             }
 
         } else {
-            return json_encode(array("erro" => 1, "mensagem" => "Email ou senha incorretos" .md5($senha)));
+            return json_encode(array("erro" => 1, "mensagem" => "Email ou senha incorretos"));
 
         }
     }
