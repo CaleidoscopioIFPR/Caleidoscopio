@@ -89,7 +89,7 @@ class Acesso extends GlobalSendMail
 
         switch (true) {
             case isset($_POST['type']) && $_POST['type'] == "Login" && isset($_POST['email']) && isset($_POST['senha']):
-                echo  $this->login($_POST['email'], $_POST['senha']);
+                echo  $this->login($_POST['email'], md5($_POST['senha']));
                 break;
             case isset($_POST['type']) && $_POST['type'] == "Cadastro" && isset($_POST['nome']) && isset($_POST['sobrenome']) && isset($_POST['email']) && isset($_POST['senha']) && isset($_POST['confirmarSenha']):
                 echo  $this->cadastro($_POST['nome'], $_POST['sobrenome'], $_POST['email'], $_POST['senha'], $_POST['confirmarSenha']);
@@ -122,24 +122,32 @@ class Acesso extends GlobalSendMail
         $conexao = $this->con;
         $query = $conexao->prepare("SELECT * FROM usuario WHERE email = ? AND senha = ?");
         $query->execute(array($email,$senha));
-
         if ($query->rowCount()) {
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
 
-            $novasenha = md5($senha);
 
+<<<<<<< HEAD
             if($user['senha'] == $senha && $user['confirmarEmail']){
+=======
+
+            if($user['senha'] === $senha && $user['confirmarEmail']){
+>>>>>>> 6cf09c38f4bea8b24aae215d2edd03cacf0a9fa2
                 session_start();
                 $_SESSION['usuario'] = array($user['nome'], $user['sobrenome'], $user['adm']);
                 return json_encode(array("erro" => 0));
             }
 
+<<<<<<< HEAD
             if ($user['senha'] ==$senha && !$user['confirmarEmail']) {
+=======
+            if ($user['senha'] === md5($senha) && !$user['confirmarEmail']) {
+>>>>>>> 6cf09c38f4bea8b24aae215d2edd03cacf0a9fa2
                 return json_encode(array("erro" => 2, "mensagem" => "Olá {$user['nome']} {$user['sobrenome']}, por favor confirme sua conta"));
             }
 
         } else {
             return json_encode(array("erro" => 1, "mensagem" => "Email ou senha incorretos"));
+
         }
     }
 
