@@ -46,13 +46,14 @@
 
 .sidebar-menu li {
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 1.9rem;
     padding-left: 2rem;
 }
 
 .sidebar-menu a {
     padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 10px;
     display: block;
     color: white;
     font-size: 1.1rem;
@@ -518,8 +519,11 @@ body::-webkit-scrollbar {
     transition: 0.2s ease-out;
     background-color: #f1f1f1;
   }
-
-
+  .content img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 .linha {
     margin-top: 30px;
     display: flex;
@@ -539,7 +543,6 @@ body::-webkit-scrollbar {
 
 .linha img {
     margin-top: 1rem;
-    margin-left: 20rem;
     justify-content: center;
     align-items: center;
 }
